@@ -1,0 +1,38 @@
+<mat-progress-bar mode="indeterminate" *ngIf="!loper && loading"></mat-progress-bar>
+<div fxLayoutAlign="center center" fxFlex=100 fxFlex.gt-sm=100 >
+  <mat-card class="card" *ngIf="!loading" style="width:100%;">
+    <!--
+  <mat-card-header>
+    <mat-card-title>Track</mat-card-title>
+  </mat-card-header>
+    -->
+  <mat-card-content *ngIf="messages" style="width:100%">
+      <span fxLayout="row" fxLayoutGap="2%" class="name" style="width:100%">
+
+        <div *ngIf="routeid" class="map-container" style="width:70%">
+            <app-map [locatie$]="locatie" [isEdit]=false [routeId]="routeid"></app-map>
+          </div>
+        <div>
+          <h2>{{ loper.firstName }} {{ loper.lastName }} {{'Track.uit' | translate}} {{ loper.gemeente }}</h2>
+          <nb-layout>
+            <nb-layout-column>
+              <nb-chat title="{{ 'geo-json-upload.Chat met wandelaar' | translate }}" size="medium" status="danger">
+                <nb-chat-message
+                  *ngFor="let msg of messages"
+                  [reply]="true"
+                  [message]="msg.text"
+                  [sender]="msg.zender"
+                  [date]="msg.date"
+                >
+                </nb-chat-message>
+                <nb-chat-form (send)="sendMessage($event)" [dropFiles]="false"> </nb-chat-form>
+              </nb-chat>
+            </nb-layout-column>
+          </nb-layout>
+        </div>
+
+      </span>
+  </mat-card-content>
+  <p class="desc" *ngIf="!loper">{{ 'Track.Deze wandelaar werd niet gevonden of de wandeling is nog niet begonnen.' | translate }}</p>
+</mat-card>
+</div>

@@ -1,0 +1,120 @@
+.navList {
+  padding: 0;
+}
+
+.navList > a {
+  color: white;
+  background-color: #fe0040;
+  border: 1px #fe0040 solid;
+  font-weight: bold;
+  width: 50%;
+  margin: 0 25% 0 25%;
+  border-radius: 5px;
+  margin-bottom: 1em;
+}
+
+.navList > a:hover {
+  color: #fe0040;
+  background-color: white;
+  border: 1px #fe0040 solid;
+}
+
+mat-card-footer {
+    padding: 40px 20px;
+}
+
+mat-card-footer {
+  height: 100%;
+  color: #fff;
+  background-color: #6bb7a9;
+}
+
+a {
+  color: #fff;
+}
+
+mat-card-footer .info-contact > div {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+
+}
+
+div {
+  display: block;
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+#arrow{
+  height: 30px;
+}
+
+#button{
+  padding-top: 30px;
+}
+
+.mat-nav-list-content {
+  font-size: 18px;
+}
+
+.navList > a {
+  font-size: medium;
+  width: fit-content;
+}
+
+@media only screen and (max-width: 1050px) {
+  #slideshow {
+    display: none;
+  }
+
+  #arrow{
+    height: 22px;
+  }
+
+  #button{
+    padding-top: 22px;
+  }
+
+  h1{
+    font-size: 3.5vw;
+  }
+
+  h2 {
+    font-size: 1.6vw;
+  }
+  
+  p{
+    font-size: 1.6vw;
+  }
+
+  a {
+    font-size:10px;
+  }
+
+  .navList > a {
+    font-size: small;
+    width: fit-content;
+  }
+  
+}
+
+@media only screen and (max-width: 600px) {
+  #arrow{
+    height: 15px;
+  }
+
+  #button{
+    
+    padding-top: 15px;
+  }
+
+  .navList > a {
+    font-size: xx-small;
+    width: fit-content;
+  }
+  
+}

@@ -1,0 +1,51 @@
+<div fxLayoutAlign="center center">
+<mat-card class="card" fxFlex=100 fxFlex.gt-sm=80>
+  <mat-card-header style="display:flex; justify-content:center;">
+    <h1>{{ "Home.Damiaan Experience" | translate }}</h1>
+  </mat-card-header>
+
+  <mat-card-content>
+    <p style="text-align: center; padding-bottom: 50px;" data-cy="homeIntro">
+      {{ 'Home.inleiding' | translate }}
+    </p>
+    <div style="width: 100; display: flex; justify-content: center">
+      <div style="width: 20%;">
+          <img style="width: 100%" src="/assets/images/formIcon.png">
+          <h2 fxLayoutAlign="center center">{{ 'Home.Schrijf je in' | translate }}</h2>
+          <p style="text-align: center;">{{ 'Home.Uitleg' | translate }}</p>
+          <mat-nav-list class="navList" id="button">
+            <a mat-list-item [routerLink]="['/signup']" [routerLinkActive]="['is-active']" data-cy="inschrijfBtn">{{ 'Home.Inschrijven' | translate }}</a>
+          </mat-nav-list>
+      </div>
+      <div fxLayoutAlign="center center" style="width: 10%; padding-right: 10px">
+        <img src="/assets/images/arrowIcon.png" id="arrow">
+      </div>
+      <div style="width: 20%;">
+        <img style="width: 100%" src="/assets/images/phoneIcon.png">
+        <h2 fxLayoutAlign="center center">{{ 'Home.Gebruik de app' | translate }}</h2>
+        <p style="text-align: center;">{{ 'Home.Via de app kan je uw locatie delen en uw route bekijken.' | translate }}</p>
+        <mat-nav-list class="navList" id="button">
+          <a mat-list-item>{{ 'Home.Download onze app' | translate }}</a>
+        </mat-nav-list>
+      </div>
+      <div fxLayoutAlign="center center" style="width: 10%; padding-right: 10px">
+        <img src="/assets/images/arrowIcon.png" id="arrow">
+      </div>
+      <div style="width: 20%">
+        <img style="width: 100%" src="/assets/images/routeIcon.png">
+        <h2 fxLayoutAlign="center center">{{ 'Home.Word gevolgd' | translate }}</h2>
+        <p style="text-align: center;">{{ 'Home.Uw supporters kunnen u van thuis uit volgen en supporten!' | translate }}</p>
+        <mat-nav-list class="navList" id="button">
+          <a mat-list-item [routerLink]="['/track']" [routerLinkActive]="['is-active']" data-cy="volgBtn">{{ 'Home.Volg een wandelaar' | translate }}</a>
+        </mat-nav-list>
+      </div>
+    </div>
+    
+    <div id="slideshow">
+      <div style="width:70%; margin: 0 auto;">
+        <ng-image-slider [imageSize]="{width: 800, height: 400, space: 3}" [images]="imageObject" [autoSlide]="1" [showArrow]="false" [infinite]="true" [imagePopup]="false" [animationSpeed]="5" #nav></ng-image-slider>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+</div>

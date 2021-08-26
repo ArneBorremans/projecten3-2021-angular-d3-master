@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "naam": "test123",
+    "lengte": 25,
+    "geoJson": "",
+    "punten": null,
+    "start": "0001-01-01T00:00:00",
+    "beschrijving": null,
+    "openbaar": true,
+    "lopers": null
+  },
+  {
+    "id": 2,
+    "naam": "Jowk",
+    "lengte": 50,
+    "geoJson": "",
+    "punten": null,
+    "start": "2020-11-27T21:36:00",
+    "beschrijving": "k",
+    "openbaar": true,
+    "lopers": null
+  },
+  {
+    "id": 3,
+    "naam": "Trackingtest",
+    "lengte": 25,
+    "geoJson": "",
+    "punten": null,
+    "start": "2020-11-12T19:04:00",
+    "beschrijving": "rgegreger",
+    "openbaar": true,
+    "lopers": null
+  },
+  {
+    "id": 4,
+    "naam": "test tracking",
+    "lengte": 25,
+    "geoJson": "",
+    "punten": null,
+    "start": "2020-11-12T19:15:00",
+    "beschrijving": "rggergre",
+    "openbaar": true,
+    "lopers": null
+  }
+]

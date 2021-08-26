@@ -1,0 +1,32 @@
+
+<div fxLayout="row" fxLayoutAlign="center center">
+  <div fxLayout="row" fxFlex=100 fxFlex.gt-sm=80 fxLayoutGap="0.5%">
+    <mat-card class="card" style="width: 50%; margin-top: 0px;">
+      <mat-card-title style="text-align: center;">{{ 'Track-confirm.Zoek iemand op' | translate }}</mat-card-title>
+      <div fxLayoutAlign="center" style="text-align: center; margin: 0px; color: grey; font-size: 0.8rem;">
+        <p style="width: 80%; padding-top: 20px">{{ 'Track-confirm.Uitleg' | translate }}</p>
+      </div>
+      <div fxLayoutAlign="center center" style="padding-top: 50px;"> 
+        <img style="width: 70%" src='/assets/images/trackingImage.png'>
+      </div>
+    </mat-card>
+    <mat-card class="card" style="width: 50%">
+      <mat-card-title style="text-align: center">
+        {{ 'Track-confirm.Wandelaars' | translate }}
+        <button class="zoekBtn" data-cy="track-confirmZoekButton" (click)="onSearch()">
+          <mat-icon style="color: white">search</mat-icon>
+        </button>
+      </mat-card-title>
+    
+      <p style="padding-top: 20px;" class="desc" *ngIf="lopers && lopers.length == 0">{{ 'Track-confirm.Niemand' | translate }}</p>
+      <mat-chip-list style="padding-top: 20px;" aria-label="Wandelaars" fxLayoutAlign="center">
+        <mat-chip color="primary" *ngFor="let l of lopers" routerLink="/route/track/{{l.linkCode}}" data-cy="trackLoperItem" selected>{{l.firstName}} {{l.lastName}} <mat-icon matChipRemove>explore</mat-icon></mat-chip>
+      </mat-chip-list>
+      <div fxLayoutAlign="center center" >
+      <mat-spinner [diameter]="40" color="primary" *ngIf="loading || loadingMore"></mat-spinner>
+        <button mat-icon-button *ngIf="!loading && !loadingMore && lopers.length > 0 && (lopers.length % 20 == 0)" (click)="onLoadMore()"><mat-icon>more_horiz</mat-icon></button>
+      </div>
+    </mat-card>
+  </div>
+</div>
+

@@ -1,0 +1,167 @@
+<div class="backgroundImage">
+  <mat-toolbar class="navBar" color="primary">
+    <span id="logo">
+      <img
+        [routerLink]="['home']"
+        *ngIf="this.translate.currentLang == 'nl'; else fr"
+        src="assets/images/damiaanLogoTransparant.png"
+        id="logoImage"
+        data-cy="navHomeLogo"
+      />
+
+      <ng-template #fr
+        ><img
+          [routerLink]="['home']"
+          src="assets/images/damiaanLogoTransparant_frans.png"
+          id="logoImage"
+      /></ng-template>
+    </span>
+    <mat-nav-list class="navList" fxLayout="row">
+      <span fxFlex="fill"></span>
+      <a
+        mat-list-item
+        [routerLink]="['home']"
+        [routerLinkActive]="['is-active']"
+        data-cy="navHomeBtn"><span>{{ "Main-nav.Damiaan Experience" | translate }}</span></a
+      >
+      <a
+        mat-list-item
+        [routerLink]="['track']"
+        [routerLinkActive]="['is-active']"
+        data-cy="navVolgBtn"><span>{{ "Main-nav.Zoek iemand op" | translate }}</span></a
+      >
+      <a
+        mat-list-item
+        [routerLink]="['route']"
+        [routerLinkActive]="['is-active']"
+        *ngIf="isAdmin"
+        data-cy="navRouteBtn"
+        >Routes</a
+      >
+
+      <button
+        mat-icon-button
+        [matMenuTriggerFor]="menu"
+        *ngIf="loggedInUser$ | async as user; else noLogin"
+        data-cy="navUserMenuButton"
+      >
+        <mat-icon>account_box</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu" data-cy="navProfileMenu">
+        <button mat-menu-item routerLink="profile">
+          <mat-icon>contact_page</mat-icon>
+          <span>{{ "Main-nav.Mijn profiel" | translate }}</span>
+        </button>
+        <button mat-menu-item (click)="logout()" data-cy="logoutButton">
+          <mat-icon>exit_to_app</mat-icon>
+          <span>{{ "Main-nav.Afmelden" | translate }}</span>
+        </button>
+      </mat-menu>
+      <ng-template #noLogin>
+        <button mat-icon-button routerLink="login">
+          <mat-icon>person</mat-icon>
+        </button>
+      </ng-template>
+
+      <button mat-icon-button [matMenuTriggerFor]="taalMenu" data-cy="langButton"><mat-icon>language</mat-icon></button>
+      <mat-menu #taalMenu="matMenu" title="Taal">
+        <button mat-menu-item data-cy="nlButton" (click)="translate.use('nl')">
+          <span>NL</span>
+        </button>
+        <button mat-menu-item data-cy="frButton" (click)="translate.use('fr')">
+          <span>FR</span>
+        </button>
+      </mat-menu>
+    </mat-nav-list>
+
+    <span class="inDeKijker">
+      <a
+        [routerLink]="['signup']"
+        [routerLinkActive]="['is-active-inDeKijker']"
+         data-cy="navInschrijfBtn"
+        >{{ "Main-nav.Inschrijven voor wandeling" | translate }}</a
+      >
+    </span>
+  </mat-toolbar>
+
+  <!-- Nav FOR MOBILE -->
+  <mat-toolbar class="mobileNavBar">
+    <mat-nav-list class="navList" fxLayout="row">
+      <span id="logo">
+        <img
+          [routerLink]="['home']"
+          *ngIf="this.translate.currentLang == 'nl'; else fr"
+          src="assets/images/damiaanLogoTransparant.png"
+          id="logoImage"
+        />
+        <ng-template #fr
+          ><img
+            [routerLink]="['home']"
+            src="assets/images/damiaanLogoTransparant_frans.png"
+            id="logoImage"
+        /></ng-template>
+      </span>
+      <span fxFlex="fill" id="span1"></span>
+      <button mat-icon-button [matMenuTriggerFor]="mobileMenu" id="button1" data-cy="navMobileMenu">
+        <img id="mobileButton" src="././assets/images/HamburgerIcon.png" />
+      </button>
+      <mat-menu #mobileMenu="matMenu">
+        <button mat-menu-item routerLink="home" routerLinkActive="is-active" data-cy="navMobileHomeButton">
+          <span>Home</span>
+        </button>
+        <button mat-menu-item routerLink="track" routerLinkActive="is-active" data-cy="navMobileTrackButton">
+          <span>Track</span>
+        </button>
+        <button
+          mat-menu-item
+          routerLink="route"
+          routerLinkActive="is-active"
+          *ngIf="isAdmin"
+          data-cy="navMobileRoutesButton"
+        >
+          <span>Routes</span>
+        </button>
+        <button mat-menu-item routerLink="signup" routerLinkActive="is-active" data-cy="navMobileSchrijfinButton">
+          <span>Schrijf in</span>
+        </button>
+        <mat-divider class="mobileDivider"></mat-divider>
+        <span
+          mat-icon-button
+          [matMenuTriggerFor]="menu"
+          *ngIf="loggedInUser$ | async as user; else mobileNoLogin"
+        >
+          <button
+            mat-menu-item
+            routerLink="profile"
+            routerLinkActive="is-active"
+            data-cy="navMobileProfileButton"
+          >
+            <span>{{ "Main-nav.Mijn profiel" | translate }}</span>
+          </button>
+          <button mat-menu-item (click)="logout()" data-cy="navMobileLogoutButton">
+            <span>{{ "Main-nav.Afmelden" | translate }}</span>
+          </button>
+        </span>
+        <ng-template #mobileNoLogin>
+          <button mat-menu-item routerLink="login" routerLinkActive="is-active" data-cy="navMobileLoginButton">
+            <span>Log in</span>
+          </button>
+        </ng-template>
+        <!--<mat-divider class="mobileDivider"></mat-divider>-->
+        <button mat-menu-item [matMenuTriggerFor]="taalMenu"
+                data-cy="navMobileLanguageButton"><mat-icon>language</mat-icon></button>
+        <mat-menu #taalMenu="matMenu" title="Taal">
+          <button mat-menu-item (click)="translate.use('nl')">
+            <span>NL</span>
+          </button>
+          <button mat-menu-item (click)="translate.use('fr')">
+            <span>FR</span>
+          </button>
+        </mat-menu>
+      </mat-menu>
+    </mat-nav-list>
+  </mat-toolbar>
+  <!-- //// -->
+</div>
+
+<ng-content></ng-content>

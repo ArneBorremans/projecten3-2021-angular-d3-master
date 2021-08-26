@@ -1,0 +1,91 @@
+<div *ngIf="!isEdit">
+  <div class="map-frame" style="width: 100%">
+    <div id="{{ divId }}" class="map"></div>
+  </div>
+</div>
+<div *ngIf="isEdit">
+  <span fxLayout="row" fxLayoutGap="2%">
+    <div class="map-frame" style="width: 100%">
+      <div id="mapEdit" class="map"></div>
+    </div>
+    <div>
+      <div
+        layout="width:30%"
+        [style.overflow]="'auto'"
+        [style.height.px]="'600'"
+      >
+        <ul
+          *ngIf="points.length > 0"
+          fxLayout="column"
+          fxLayoutAlign="start"
+          fxLayoutGap="1%"
+          class="PointLijst"
+        >
+          <li *ngFor="let point of points; let i = index" fxLayout="column">
+            <div class="pointNaamContainer">
+              <mat-icon [ngStyle]="{ color: point.color }">room</mat-icon>
+              <form [formGroup]="pointNaamForm" (ngSubmit)="veranderPointNaam(point)">
+                <mat-form-field>
+                  <mat-label>naam van punt</mat-label>
+                  <input formControlName="pointNaam"
+                    matInput value="{{point.naam}}"
+                  />
+                </mat-form-field>
+              </form>
+            </div>
+
+            <mat-form-field>
+              <mat-chip-list #chipList>
+                <mat-chip
+                  *ngFor="let faciliteit of point.faciliteiten; let j = index"
+                  [removable]="true"
+                  (removed)="removeFaciliteit(faciliteit, point)"
+                  color="primary"
+                >
+                  {{ faciliteit }}
+                  <mat-icon matChipRemove>cancel</mat-icon>
+                </mat-chip>
+                <input
+                  [formControl]="faciliteitenFC"
+                  [matAutocomplete]="auto"
+                  [matChipInputFor]="chipList"
+                  [matChipInputSeparatorKeyCodes]="separatorKeyCodes"
+                  (matChipInputTokenEnd)="addFaciliteit($event, point)"
+                />
+              </mat-chip-list>
+              <mat-autocomplete
+                #auto="matAutocomplete"
+                (optionSelected)="addFaciliteitAutocomplete($event, point)"
+              >
+                <mat-option
+                  *ngFor="let faciliteit of standaardFaciliteiten"
+                  [value]="faciliteit"
+                >
+                  {{ faciliteit }}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+          </li>
+        </ul>
+        <h2
+          *ngIf="points.length === 0"
+          fxLayout="row"
+          xLayout.xs="column"
+          fxFlexFill
+          fxLayoutAlign="center center"
+        >
+          {{ "map.Klik op de route om punten toe te voegen." | translate }}
+        </h2>
+      </div>
+    </div>
+  </span>
+</div>
+<mat-card class="error" *ngIf="errorMessage" data-cy="appError">
+  {{ errorMessage | translate }}
+</mat-card>
+<!-- <button mat-mini-fab class="hoverButton" color="primary" (click)="isEdit = true" *ngIf="!isEdit">
+    <mat-icon>edit</mat-icon>
+  </button>
+  <button mat-mini-fab class="hoverButton" color="primary" *ngIf="isEdit">
+    <mat-icon>check</mat-icon>
+  </button> -->

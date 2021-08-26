@@ -1,0 +1,10 @@
+.routeImage{
+    max-height: 300px;
+    max-width: 100%;
+}
+.imageDeleteButton{
+    margin-top: 5px;
+}
+.imageContainer{
+    margin: 10px auto;
+}

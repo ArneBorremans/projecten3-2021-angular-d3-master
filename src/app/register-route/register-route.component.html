@@ -1,0 +1,55 @@
+<mat-progress-bar
+  mode="indeterminate"
+  *ngIf="!filteredRoutes"
+></mat-progress-bar>
+<div
+  fxLayout="row"
+  fxLayoutAlign="center"
+  style="margin: 5px 0 5px 0"
+  *ngIf="filteredRoutes"
+>
+  <mat-button-toggle-group name="afstand">
+    <mat-button-toggle
+      value="25"
+      (click)="showRoutesS()"
+      checked
+      *ngIf="routesExist[0]"
+      >25 km</mat-button-toggle
+    >
+    <mat-button-toggle value="50" (click)="showRoutesM()" *ngIf="routesExist[1]"
+                       data-cy="registerRouteDistance50"
+      >50 km</mat-button-toggle
+    >
+    <mat-button-toggle
+      value="100"
+      (click)="showRoutesL()"
+      *ngIf="routesExist[2]"
+      data-cy="registerRouteDistance100"
+      >100 km</mat-button-toggle
+    >
+  </mat-button-toggle-group>
+</div>
+
+<ul style="padding: 0; margin-top: 0">
+  <li
+    style="width: 100%"
+    *ngFor="let route of filteredRoutes; let i = index"
+    fxLayoutAlign="center"
+    fxLayout="row"
+  >
+    <app-register-route-item
+      [route]="route"
+      style="margin-bottom: 5px"
+      fxFlex="100"
+      fxFlex.gt-sm="80"
+      data-cy="registerRouteItem"
+    ></app-register-route-item>
+  </li>
+</ul>
+<div fxLayoutAlign="center" *ngIf="errorMessage" >
+  <mat-card class="error" 
+            data-cy="appError" 
+            style="margin-bottom: 5px; width: 50%; text-align: center;">
+    {{ errorMessage | translate}}
+  </mat-card>
+</div>

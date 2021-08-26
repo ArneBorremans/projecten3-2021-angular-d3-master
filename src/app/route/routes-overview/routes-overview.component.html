@@ -1,0 +1,28 @@
+<mat-progress-bar mode="indeterminate" *ngIf="!routes"></mat-progress-bar>
+<div fxLayoutAlign="center center">
+  <mat-card class="card" fxFlex=100 fxFlex.gt-sm=80>
+    <mat-card-title>
+      {{ 'Routes-overview.Wandelingen' | translate }}
+      <button class="zoekBtn" id="addButton" routerLink="/route/new" data-cy="routeOverviewAddButton">
+        <mat-icon>add</mat-icon>
+      </button>
+    </mat-card-title>
+    <mat-card-content *ngIf="routes">
+      <mat-grid-list cols="6" rowHeight="13rem" gutterSize="3" *ngIf="routes.length > 0">
+
+        <mat-grid-tile *ngFor="let route of routes; let i = index">
+          <div fxLayout="column" fxLayoutAlign="center center">
+            <h2 style="text-align: center;">{{route.name.get(translate.currentLang)}}</h2>
+            <img src="{{route.imgUrl}}" (click)="onSelect(route)" style="height: 10rem; width: 10rem;" data-cy="routeThumbnail"/>
+          </div>
+        </mat-grid-tile>
+        
+      </mat-grid-list>      
+      <p *ngIf="routes.length < 1" data-cy="geenWandelingenMelding">{{ 'Routes-overview.Nog geen wandelingen toegevoegd' | translate }}</p>
+
+    </mat-card-content>
+  </mat-card>
+</div>
+<mat-card class="error" *ngIf="errorMessage" data-cy="appError">
+  {{ errorMessage | translate}}
+ </mat-card>

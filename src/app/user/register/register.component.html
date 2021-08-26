@@ -1,0 +1,150 @@
+<div fxLayoutAlign="center center">
+  <mat-card class="card" fxFlex="100" fxFlex.gt-sm="80">
+    <form [formGroup]="user" (ngSubmit)="onSubmit()">
+      <mat-card-header>
+        <mat-card-title>{{ 'Register.Registreer' | translate }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content fxLayout="column">
+        <span fxLayout="row" fxLayoutGap="2%" class="name">
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="{{ 'Register.voornaam' | translate }}"
+              aria-label="first name"
+              data-cy="register-firstname"
+              formControlName="firstname"
+            />
+            <mat-error
+              *ngIf="
+                user.get('firstname').errors &&
+                (user.get('firstname').touched || submitted)
+              "
+            >
+              {{ getErrorMessage(user.get("firstname").errors) | translate }}
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="{{ 'Register.achternaam' | translate }}"
+              aria-label="last name"
+              data-cy="register-lastname"
+              formControlName="lastname"
+            />
+            <mat-error
+              *ngIf="
+                user.get('lastname').errors &&
+                (user.get('lastname').touched || submitted)
+              "
+            >
+              {{ getErrorMessage(user.get("lastname").errors) | translate }}
+            </mat-error>
+          </mat-form-field>
+        </span>
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="{{ 'Register.email' | translate }}"
+            aria-label="email"
+            data-cy="register-email"
+            formControlName="email"
+          />
+          <mat-error
+            *ngIf="
+              user.get('email').errors &&
+              (user.get('email').touched || submitted)
+            "
+          >
+            {{ getErrorMessage(user.get("emailError").errors) | translate }}
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput
+                 placeholder="{{ 'Register.gemeente' | translate }}"
+                 aria-label="gemeente"
+                 data-cy="register-gemeente"
+                 formControlName="gemeente" />
+          <mat-error *ngIf="
+                user.get('gemeente').errors && user.get('gemeente').touched
+              ">
+            {{ getErrorMessage(user.get('lastname').errors) |  translate }}
+          </mat-error>
+        </mat-form-field>
+        <span fxLayout="column" formGroupName="passwordGroup">
+          <mat-form-field>
+            <input
+              type="password"
+              matInput
+              placeholder="{{ 'Register.wachtwoord' | translate }}"
+              aria-label="password"
+              data-cy="register-password"
+              formControlName="password"
+            />
+            <mat-error
+              *ngIf="
+                user.get('passwordGroup').get('password').errors &&
+                user.get('passwordGroup').get('password').touched
+              "
+            >
+              {{
+                getErrorMessage(
+                  user.get("passwordGroup").get("password").errors
+                ) | translate:'{minLength: ' + minLength + '}' 
+              }}
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              type="password"
+              matInput
+              placeholder="{{ 'Register.bevestig wachtwoord' | translate }}"
+              aria-label="confirm password"
+              data-cy="register-confirm-password"
+              formControlName="confirmPassword"
+            />
+            <mat-error
+              *ngIf="
+                user.get('passwordGroup').get('confirmPassword').errors &&
+                (user.get('passwordGroup').get('confirmPassword').touched ||
+                  submitted)
+              "
+            >
+              {{
+                getErrorMessage(
+                  user.get('passwordGroup').get('confirmPassword').errors
+                ) | 
+                translate
+              }}
+            </mat-error>
+          </mat-form-field>
+          <mat-error
+            *ngIf="
+              user.get('passwordGroup').errors &&
+              user.get('passwordGroup').get('confirmPassword').touched &&
+              (user.get('passwordGroup').get('password').touched || submitted)
+            "
+          >
+            {{ getErrorMessage(user.get("passwordGroup").errors) | translate }}
+          </mat-error>
+        </span>
+      </mat-card-content>
+
+      <mat-card-actions fxLayout="row" fxLayoutAlign="space-between center">
+        <a href="/login">{{ 'Register.Al een account? Log hier in' | translate }}</a>
+
+        <button mat-raised-button *ngIf="!loading"
+                type="submit"
+                color="primary"
+                data-cy="register-button">
+                {{ 'Register.Registreer' | translate }}
+        </button>
+        <mat-spinner [diameter]="40"
+                     color="primary"
+                     *ngIf="loading"></mat-spinner>
+      </mat-card-actions>
+    </form>
+    <mat-card class="error" *ngIf="errorMessage" data-cy="appError">
+      {{ errorMessage | translate }}
+    </mat-card>
+  </mat-card>
+</div>

@@ -1,0 +1,1989 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>angular-front-end-d3 documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">angular-front-end-d3 documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>MapComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/route/map/map.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Map component</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-map</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./map.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./map.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_drawnRoute">_drawnRoute</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_geoJson">_geoJson</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_map">_map</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_marker">_marker</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_nextPoints$">_nextPoints$</a>
+                            </li>
+                            <li>
+                                <a href="#_position$">_position$</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#divId">divId</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#errorMessage">errorMessage</a>
+                            </li>
+                            <li>
+                                <a href="#faciliteitenFC">faciliteitenFC</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#finishIcon">finishIcon</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#points">points</a>
+                            </li>
+                            <li>
+                                <a href="#separatorKeyCodes">separatorKeyCodes</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#standaardFaciliteiten">standaardFaciliteiten</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#startIcon">startIcon</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addFaciliteit">addFaciliteit</a>
+                            </li>
+                            <li>
+                                <a href="#addFaciliteitAutocomplete">addFaciliteitAutocomplete</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#addLocation">addLocation</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#addPoint">addPoint</a>
+                            </li>
+                            <li>
+                                <a href="#getRandomColor">getRandomColor</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#initMap">initMap</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#removeFaciliteit">removeFaciliteit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#turnPointAddOn">turnPointAddOn</a>
+                            </li>
+                            <li>
+                                <a href="#updateLocation">updateLocation</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#isEdit">isEdit</a>
+                            </li>
+                            <li>
+                                <a href="#locatie">locatie</a>
+                            </li>
+                            <li>
+                                <a href="#routeId">routeId</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#updateStatus">updateStatus</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(_mapDataService: <a href="../injectables/MapDataService.html">MapDataService</a>, route: <a href="../classes/Route.html">ActivatedRoute</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/route/map/map.component.ts:59</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>_mapDataService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/MapDataService.html" target="_self" >MapDataService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/Route.html" target="_self" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isEdit"></a>
+                        <b>isEdit</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean" target="_blank" >Boolean</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/route/map/map.component.ts:23</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="locatie"></a>
+                        <b>locatie</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>number[]</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/route/map/map.component.ts:25</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="routeId"></a>
+                        <b>routeId</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/route/map/map.component.ts:24</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="updateStatus"></a>
+                        <b>updateStatus</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/route/map/map.component.ts:27</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addFaciliteit"></a>
+                    <span class="name">
+                        <b>
+                            addFaciliteit
+                        </b>
+                        <a href="#addFaciliteit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addFaciliteit(event: MatChipInputEvent, punt: <a href="../classes/Point.html">Point</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="278"
+                            class="link-to-prism">src/app/route/map/map.component.ts:278</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Voegt een faciliteit to aan een punt </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                            <code>MatChipInputEvent</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>punt</td>
+                                    <td>
+                                                <code><a href="../classes/Point.html" target="_self" >Point</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Het punt waar de faciliteit toegevoegt moet worden</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addFaciliteitAutocomplete"></a>
+                    <span class="name">
+                        <b>
+                            addFaciliteitAutocomplete
+                        </b>
+                        <a href="#addFaciliteitAutocomplete"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addFaciliteitAutocomplete(event: MatAutocompleteSelectedEvent, punt: <a href="../classes/Point.html">Point</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="295"
+                            class="link-to-prism">src/app/route/map/map.component.ts:295</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+                                    <td>
+                                            <code>MatAutocompleteSelectedEvent</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>punt</td>
+                                    <td>
+                                                <code><a href="../classes/Point.html" target="_self" >Point</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addLocation"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            addLocation
+                        </b>
+                        <a href="#addLocation"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>addLocation(lat: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, lon: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="184"
+                            class="link-to-prism">src/app/route/map/map.component.ts:184</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>lat</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>lon</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addPoint"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            addPoint
+                        </b>
+                        <a href="#addPoint"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>addPoint(point: <a href="../classes/Point.html">Point</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="200"
+                            class="link-to-prism">src/app/route/map/map.component.ts:200</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Voegt punt to aan de map</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>point</td>
+                                    <td>
+                                                <code><a href="../classes/Point.html" target="_self" >Point</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>toe te voegen punt</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getRandomColor"></a>
+                    <span class="name">
+                        <b>
+                            getRandomColor
+                        </b>
+                        <a href="#getRandomColor"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getRandomColor()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="314"
+                            class="link-to-prism">src/app/route/map/map.component.ts:314</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>een random kleur</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initMap"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            initMap
+                        </b>
+                        <a href="#initMap"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>initMap()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="241"
+                            class="link-to-prism">src/app/route/map/map.component.ts:241</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Initialiseert de map. Tekent de map en Locatie</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="66"
+                            class="link-to-prism">src/app/route/map/map.component.ts:66</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="removeFaciliteit"></a>
+                    <span class="name">
+                        <b>
+                            removeFaciliteit
+                        </b>
+                        <a href="#removeFaciliteit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>removeFaciliteit(faciliteit: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, punt: <a href="../classes/Point.html">Point</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="306"
+                            class="link-to-prism">src/app/route/map/map.component.ts:306</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Verwijderd de meegegeven faciliteit op het meegegeven punt</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>faciliteit</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>De te verwijderen faciliteit</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>punt</td>
+                                    <td>
+                                                <code><a href="../classes/Point.html" target="_self" >Point</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Het punt waar de faciliteit verwijderd moet worden</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="turnPointAddOn"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            turnPointAddOn
+                        </b>
+                        <a href="#turnPointAddOn"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>turnPointAddOn()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="264"
+                            class="link-to-prism">src/app/route/map/map.component.ts:264</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateLocation"></a>
+                    <span class="name">
+                        <b>
+                            updateLocation
+                        </b>
+                        <a href="#updateLocation"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>updateLocation()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="180"
+                            class="link-to-prism">src/app/route/map/map.component.ts:180</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_drawnRoute"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            _drawnRoute</b>
+                            <a href="#_drawnRoute"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/route/map/map.component.ts:43</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_geoJson"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            _geoJson</b>
+                            <a href="#_geoJson"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/route/map/map.component.ts:31</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_map"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            _map</b>
+                            <a href="#_map"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/route/map/map.component.ts:41</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_marker"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            _marker</b>
+                            <a href="#_marker"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>L.marker([0, 0])</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/route/map/map.component.ts:42</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_nextPoints$"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            _nextPoints$</b>
+                            <a href="#_nextPoints$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Subject&lt;Point[]&gt;()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/route/map/map.component.ts:32</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_position$"></a>
+                        <span class="name">
+                            <b>
+                            _position$</b>
+                            <a href="#_position$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Subject&lt;IGeoJson&gt;()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/route/map/map.component.ts:30</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="divId"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            divId</b>
+                            <a href="#divId"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/route/map/map.component.ts:38</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="errorMessage"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            errorMessage</b>
+                            <a href="#errorMessage"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;&#x27;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/route/map/map.component.ts:33</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="faciliteitenFC"></a>
+                        <span class="name">
+                            <b>
+                            faciliteitenFC</b>
+                            <a href="#faciliteitenFC"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new FormControl()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/route/map/map.component.ts:36</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="finishIcon"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            finishIcon</b>
+                            <a href="#finishIcon"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>L.icon({
+    iconUrl: &#x27;/assets/images/finishFlag.png&#x27;,
+
+    iconSize: [19, 19], // size of the icon
+    iconAnchor: [11, 18], // point of the icon which will correspond to marker&#x27;s location
+    popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
+  })</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/route/map/map.component.ts:53</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="points"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            points</b>
+                            <a href="#points"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Point.html" target="_self" >Point[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/route/map/map.component.ts:29</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="separatorKeyCodes"></a>
+                        <span class="name">
+                            <b>
+                            separatorKeyCodes</b>
+                            <a href="#separatorKeyCodes"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[ENTER]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/route/map/map.component.ts:37</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="standaardFaciliteiten"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            standaardFaciliteiten</b>
+                            <a href="#standaardFaciliteiten"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[&#x27;toilet&#x27;, &#x27;eten&#x27;]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/route/map/map.component.ts:35</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="startIcon"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            startIcon</b>
+                            <a href="#startIcon"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>L.icon({
+    iconUrl: &#x27;/assets/images/startIcon.png&#x27;,
+
+    iconSize: [19, 19], // size of the icon
+    iconAnchor: [11, 18], // point of the icon which will correspond to marker&#x27;s location
+    popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
+  })</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/route/map/map.component.ts:45</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, EventEmitter, Input, OnInit, Output } from &#x27;@angular/core&#x27;;
+import { FormControl } from &#x27;@angular/forms&#x27;;
+import { ActivatedRoute } from &#x27;@angular/router&#x27;;
+import * as L from &#x27;leaflet&#x27;;
+import { Subject, combineLatest } from &#x27;rxjs&#x27;;
+import { debounceTime, map, switchMap, tap } from &#x27;rxjs/operators&#x27;;
+import { MapDataService } from &#x27;src/app/shared/services/map-data.service&#x27;;
+import { environment } from &#x27;src/environments/environment&#x27;;
+import { IGeoJson, Point } from &#x27;../mapPoints&#x27;;
+import { ENTER } from &#x27;@angular/cdk/keycodes&#x27;;
+import { MatChipInputEvent } from &#x27;@angular/material/chips&#x27;;
+import { MatAutocompleteSelectedEvent } from &#x27;@angular/material/autocomplete&#x27;;
+
+/**
+ * Map component
+ */
+@Component({
+  selector: &#x27;app-map&#x27;,
+  templateUrl: &#x27;./map.component.html&#x27;,
+  styleUrls: [&#x27;./map.component.css&#x27;],
+})
+export class MapComponent implements OnInit {
+  @Input() public isEdit: Boolean;
+  @Input() public routeId: number;
+  @Input() public locatie: number[];
+
+  @Output() public updateStatus &#x3D; new EventEmitter&lt;string&gt;();
+
+  public points: Point[];
+  _position$ &#x3D; new Subject&lt;IGeoJson&gt;();
+  private _geoJson;
+  private _nextPoints$ &#x3D; new Subject&lt;Point[]&gt;();
+  public errorMessage: string &#x3D; &#x27;&#x27;;
+
+  public standaardFaciliteiten &#x3D; [&#x27;toilet&#x27;, &#x27;eten&#x27;];
+  faciliteitenFC &#x3D; new FormControl();
+  separatorKeyCodes &#x3D; [ENTER];
+  public divId;
+
+  //leaflet objects
+  private _map;
+  private _marker &#x3D; L.marker([0, 0]);
+  private _drawnRoute;
+
+  private startIcon &#x3D; L.icon({
+    iconUrl: &#x27;/assets/images/startIcon.png&#x27;,
+
+    iconSize: [19, 19], // size of the icon
+    iconAnchor: [11, 18], // point of the icon which will correspond to marker&#x27;s location
+    popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
+  });
+
+  private finishIcon &#x3D; L.icon({
+    iconUrl: &#x27;/assets/images/finishFlag.png&#x27;,
+
+    iconSize: [19, 19], // size of the icon
+    iconAnchor: [11, 18], // point of the icon which will correspond to marker&#x27;s location
+    popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
+  });
+
+  constructor(
+    private _mapDataService: MapDataService,
+    private route: ActivatedRoute
+  ) {}
+
+  ngOnInit(): void {
+    //Kijken of het id van de route is meegegven via de url of de @Input()
+    this.route.params.subscribe((params) &#x3D;&gt; {
+      this.routeId &#x3D; +params[&#x27;id&#x27;] &gt; 0 ? +params[&#x27;id&#x27;] : this.routeId;
+    });
+    // Elke map uit route lijst een uniek id geven, anders wordt de map overschreven
+    this.divId &#x3D; this.isEdit? &#x27;mapEdit&#x27;: &#x27;map&#x27; + this.routeId;
+    const route$ &#x3D; this._mapDataService.routeGeoJson$(this.routeId);
+    const points$ &#x3D; this._mapDataService.getCheckpoints$(this.routeId);
+
+    //sync gets
+    combineLatest([route$, points$])
+      .pipe(
+        map(([route$, points$]) &#x3D;&gt; ({
+          route: route$,
+          points: points$,
+        }))
+      )
+      .subscribe((vars) &#x3D;&gt; {
+        this._geoJson &#x3D; vars.route;
+        this.points &#x3D; this.routeId &#x3D;&#x3D; 0 ? [] : vars.points;
+        this.initMap();
+        //draw route
+        //nog een catcherror
+        this._drawnRoute &#x3D; L.geoJSON(this._geoJson, { weight: 5 });
+        this._drawnRoute.addTo(this._map);
+        //draw points
+        this.points &#x3D; this.points;
+        this.points.forEach((p) &#x3D;&gt; this.addPoint(p));
+        if (this.isEdit) {
+          this.turnPointAddOn();
+        }
+
+        L.marker(
+          [
+            this._geoJson.geometry.coordinates[
+              this._geoJson.geometry.coordinates.length - 1
+            ][1],
+            this._geoJson.geometry.coordinates[
+              this._geoJson.geometry.coordinates.length - 1
+            ][0],
+          ],
+          { icon: this.finishIcon }
+        )
+          .addTo(this._map)
+          .bindTooltip(&#x27;Einde wandeling&#x27;);
+        L.marker(
+          [
+            this._geoJson.geometry.coordinates[0][1],
+            this._geoJson.geometry.coordinates[0][0],
+          ],
+          { icon: this.startIcon }
+        )
+          .addTo(this._map)
+          .bindTooltip(&#x27;Start wandeling&#x27;);
+
+        if (this.locatie) {
+          var ref: [number, number] &#x3D; [this.locatie[1], this.locatie[0]];
+
+          const haversine &#x3D; ([lonA, latA], [lonB, latB]) &#x3D;&gt; {
+            const { PI, sin, cos, atan2 } &#x3D; Math,
+              r &#x3D; PI / 180,
+              R &#x3D; 6371,
+              deltaLat &#x3D; (latB - latA) * r,
+              deltaLon &#x3D; (lonB - lonA) * r,
+              a &#x3D;
+                sin(deltaLat / 2) ** 2 +
+                cos(cos(latB * r) * latA * r) * sin(deltaLon / 2) ** 2,
+              c &#x3D; 2 * atan2(a ** 0.5, (1 - a) ** 0.5),
+              d &#x3D; R * c;
+            return d;
+          };
+
+          var afstanden &#x3D; this._geoJson.geometry.coordinates.map((r) &#x3D;&gt; {
+            const distance &#x3D; haversine(r, ref);
+            return distance;
+          });
+
+          var dichtste &#x3D; afstanden.reduce((a, b) &#x3D;&gt; Math.min(a, b));
+          var index &#x3D; afstanden.findIndex((a) &#x3D;&gt; a &#x3D;&#x3D; dichtste);
+          var afgelegdeRoute &#x3D; this._geoJson.geometry.coordinates.slice(
+            0,
+            index
+          );
+          var myLines &#x3D; {
+            type: &#x27;LineString&#x27;,
+            coordinates: afgelegdeRoute,
+          };
+
+          var routeTekenen &#x3D; L.geoJSON(myLines, {
+            weight: 8,
+            color: &#x27;#ea2247&#x27;,
+          });
+          routeTekenen.addTo(this._map);
+
+          this.addLocation(this.locatie[0], this.locatie[1]);
+        }
+      });
+
+    //Listener for adding points to backend
+    this._nextPoints$
+      .pipe(
+        debounceTime(1500),
+        tap((_) &#x3D;&gt; console.log(&#x27;Aan het opslaan&#x27;)),
+        switchMap((points) &#x3D;&gt;
+          this._mapDataService.updatePoints$(this.routeId, points)
+        )
+      )
+      .subscribe((_) &#x3D;&gt; console.log(&#x27;Route opgeslagen&#x27;));
+    this._position$
+      .pipe(map((loc) &#x3D;&gt; L.GeoJSON.coordsToLatLng(loc.geometry.coordinates)))
+      .subscribe((latlng) &#x3D;&gt; this._marker.setLatLng(latlng));
+  }
+
+  updateLocation() {
+    this._position$.next(this._mapDataService.location);
+  }
+
+  private addLocation(lat: number, lon: number) {
+    console.log(lat, lon);
+    let marker &#x3D; L.circle([lat, lon], {
+      radius: 50,
+      fillOpacity: 1,
+      color: &#x27;#82DBFF&#x27;,
+      bubblingMouseEvents: false,
+    });
+
+    marker.addTo(this._map);
+  }
+
+  /**
+   * Voegt punt to aan de map
+   * @param point toe te voegen punt
+   */
+  private addPoint(point: Point) {
+    point.color &#x3D; this.getRandomColor();
+
+    let marker &#x3D; L.circle([point.lat, point.lon], {
+      radius: 30,
+      fillOpacity: 1,
+      color: point.color,
+      bubblingMouseEvents: false,
+    }); /*.bindTooltip(this._i, 
+    {
+        permanent: true, 
+        direction: &#x27;right&#x27;
+    });
+    */
+    if (this.isEdit) {
+      marker.on(&#x27;click&#x27;, () &#x3D;&gt; {
+        this.points.splice(
+          this.points.findIndex((p) &#x3D;&gt; p &#x3D;&#x3D;&#x3D; point),
+          1
+        );
+        marker.remove();
+        this._nextPoints$.next(this.points);
+      });
+    } else {
+      //configure popup
+      //TODO: A next sprint?(was nice to have)
+      // marker &#x3D; marker.bindPopup(() &#x3D;&gt; {
+      //   let string &#x3D; &#x27;&#x27;;
+      //   for (let property in point.properties) {
+      //     string +&#x3D;
+      //       &#x27;&lt;b&gt;&#x27; + property + &#x27;&lt;/b&gt;: &#x27; + point.properties[property];
+      //   }
+      //   return string;
+      // });
+    }
+    marker.addTo(this._map).bindTooltip(&#x27;Tussenstop&#x27;);
+  }
+
+  /**
+   * Initialiseert de map. Tekent de map en Locatie
+   */
+  private initMap() {
+    //initialize leaflet map object
+    this._map &#x3D; L.map(this.divId , {
+      center: [
+        this._geoJson.geometry.coordinates[0][1],
+        this._geoJson.geometry.coordinates[0][0],
+      ],
+      zoom: 15,
+    });
+
+    //draw map
+    L.tileLayer(environment.map.tileset, {
+      maxZoom: 19,
+      attribution: environment.map.attribution,
+    }).addTo(this._map);
+
+    //draw location
+    if (!this.isEdit) {
+      this._marker.addTo(this._map);
+      setInterval(() &#x3D;&gt; this.updateLocation(), 1000);
+    }
+  }
+
+  private turnPointAddOn(): void {
+    this._drawnRoute.on(&#x27;click&#x27;, (e) &#x3D;&gt; {
+      let pointToAdd &#x3D; new Point(0, &#x27;test&#x27;, e.latlng.lat, e.latlng.lng, []);
+      this.addPoint(pointToAdd);
+      this.points.push(pointToAdd);
+      this._nextPoints$.next(this.points);
+    });
+  }
+
+    /**
+     * Voegt een faciliteit to aan een punt 
+     * @param event 
+     * @param punt Het punt waar de faciliteit toegevoegt moet worden
+     */
+  addFaciliteit(event: MatChipInputEvent, punt: Point) {
+    const input &#x3D; event.input;
+    const value &#x3D; event.value;
+
+    if ((value || &#x27;&#x27;).trim()) {
+      punt.addFaciliteit(value.trim());
+    }
+
+    if (input) {
+      input.value &#x3D; &#x27;&#x27;;
+    }
+
+    this.faciliteitenFC.setValue(null);
+    this._nextPoints$.next(this.points);
+  }
+
+
+  addFaciliteitAutocomplete(event: MatAutocompleteSelectedEvent, punt: Point) {
+    punt.addFaciliteit(event.option.viewValue);
+    this.faciliteitenFC.setValue(null);
+    this._nextPoints$.next(this.points);
+  }
+
+  /**
+   * Verwijderd de meegegeven faciliteit op het meegegeven punt
+   * @param faciliteit De te verwijderen faciliteit
+   * @param punt Het punt waar de faciliteit verwijderd moet worden
+   */
+  removeFaciliteit(faciliteit: string, punt: Point) {
+    punt.removeFaciliteit(faciliteit);
+    this._nextPoints$.next(this.points);
+  }
+
+  /**
+   * @returns een random kleur
+   */
+  getRandomColor() {
+    var color &#x3D; Math.floor(0x1000000 * Math.random()).toString(16);
+    return &#x27;#&#x27; + (&#x27;000000&#x27; + color).slice(-6);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div *ngIf&#x3D;&quot;!isEdit&quot;&gt;
+  &lt;div class&#x3D;&quot;map-frame&quot; style&#x3D;&quot;width: 100%&quot;&gt;
+    &lt;div id&#x3D;&quot;{{ divId }}&quot; class&#x3D;&quot;map&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div *ngIf&#x3D;&quot;isEdit&quot;&gt;
+  &lt;span fxLayout&#x3D;&quot;row&quot; fxLayoutGap&#x3D;&quot;2%&quot;&gt;
+    &lt;div class&#x3D;&quot;map-frame&quot; style&#x3D;&quot;width: 100%&quot;&gt;
+      &lt;div id&#x3D;&quot;mapEdit&quot; class&#x3D;&quot;map&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;div
+        layout&#x3D;&quot;width:30%&quot;
+        [style.overflow]&#x3D;&quot;&#x27;auto&#x27;&quot;
+        [style.height.px]&#x3D;&quot;&#x27;600&#x27;&quot;
+      &gt;
+        &lt;ul
+          *ngIf&#x3D;&quot;points.length &gt; 0&quot;
+          fxLayout&#x3D;&quot;column&quot;
+          fxLayoutAlign&#x3D;&quot;start&quot;
+          fxLayoutGap&#x3D;&quot;1%&quot;
+        &gt;
+          &lt;li *ngFor&#x3D;&quot;let point of points; let i &#x3D; index&quot; fxLayout&#x3D;&quot;column&quot;&gt;
+            &lt;h2&gt;
+              &lt;mat-icon [ngStyle]&#x3D;&quot;{ color: point.color }&quot;&gt;room&lt;/mat-icon&gt;
+              Point #{{ i + 1 }}
+            &lt;/h2&gt;
+            &lt;mat-form-field&gt;
+              &lt;mat-chip-list #chipList&gt;
+                &lt;mat-chip
+                  *ngFor&#x3D;&quot;let faciliteit of point.faciliteiten; let j &#x3D; index&quot;
+                  [removable]&#x3D;&quot;true&quot;
+                  (removed)&#x3D;&quot;removeFaciliteit(faciliteit, point)&quot;
+                  color&#x3D;&quot;primary&quot;
+                &gt;
+                  {{ faciliteit }}
+                  &lt;mat-icon matChipRemove&gt;cancel&lt;/mat-icon&gt;
+                &lt;/mat-chip&gt;
+                &lt;input
+                  [formControl]&#x3D;&quot;faciliteitenFC&quot;
+                  [matAutocomplete]&#x3D;&quot;auto&quot;
+                  [matChipInputFor]&#x3D;&quot;chipList&quot;
+                  [matChipInputSeparatorKeyCodes]&#x3D;&quot;separatorKeyCodes&quot;
+                  (matChipInputTokenEnd)&#x3D;&quot;addFaciliteit($event, point)&quot;
+                /&gt;
+              &lt;/mat-chip-list&gt;
+              &lt;mat-autocomplete
+                #auto&#x3D;&quot;matAutocomplete&quot;
+                (optionSelected)&#x3D;&quot;addFaciliteitAutocomplete($event, point)&quot;
+              &gt;
+                &lt;mat-option
+                  *ngFor&#x3D;&quot;let faciliteit of standaardFaciliteiten&quot;
+                  [value]&#x3D;&quot;faciliteit&quot;
+                &gt;
+                  {{ faciliteit }}
+                &lt;/mat-option&gt;
+              &lt;/mat-autocomplete&gt;
+            &lt;/mat-form-field&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;h2
+          *ngIf&#x3D;&quot;points.length &#x3D;&#x3D;&#x3D; 0&quot;
+          fxLayout&#x3D;&quot;row&quot;
+          xLayout.xs&#x3D;&quot;column&quot;
+          fxFlexFill
+          fxLayoutAlign&#x3D;&quot;center center&quot;
+        &gt;
+          Klik op de route om punten toe te voegen.
+        &lt;/h2&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+&lt;!-- &lt;button mat-mini-fab class&#x3D;&quot;hoverButton&quot; color&#x3D;&quot;primary&quot; (click)&#x3D;&quot;isEdit &#x3D; true&quot; *ngIf&#x3D;&quot;!isEdit&quot;&gt;
+    &lt;mat-icon&gt;edit&lt;/mat-icon&gt;
+  &lt;/button&gt;
+  &lt;button mat-mini-fab class&#x3D;&quot;hoverButton&quot; color&#x3D;&quot;primary&quot; *ngIf&#x3D;&quot;isEdit&quot;&gt;
+    &lt;mat-icon&gt;check&lt;/mat-icon&gt;
+  &lt;/button&gt; --&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./map.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.map-frame{
+    border: 2px solid black;
+    height: 600px;
+}
+
+.map{
+    height: 100%;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div *ngIf="!isEdit">  <div class="map-frame" style="width: 100%">    <div id="{{ divId }}" class="map"></div>  </div></div><div *ngIf="isEdit">  <span fxLayout="row" fxLayoutGap="2%">    <div class="map-frame" style="width: 100%">      <div id="mapEdit" class="map"></div>    </div>    <div>      <div        layout="width:30%"        [style.overflow]="\'auto\'"        [style.height.px]="\'600\'"      >        <ul          *ngIf="points.length > 0"          fxLayout="column"          fxLayoutAlign="start"          fxLayoutGap="1%"        >          <li *ngFor="let point of points; let i = index" fxLayout="column">            <h2>              <mat-icon [ngStyle]="{ color: point.color }">room</mat-icon>              Point #{{ i + 1 }}            </h2>            <mat-form-field>              <mat-chip-list #chipList>                <mat-chip                  *ngFor="let faciliteit of point.faciliteiten; let j = index"                  [removable]="true"                  (removed)="removeFaciliteit(faciliteit, point)"                  color="primary"                >                  {{ faciliteit }}                  <mat-icon matChipRemove>cancel</mat-icon>                </mat-chip>                <input                  [formControl]="faciliteitenFC"                  [matAutocomplete]="auto"                  [matChipInputFor]="chipList"                  [matChipInputSeparatorKeyCodes]="separatorKeyCodes"                  (matChipInputTokenEnd)="addFaciliteit($event, point)"                />              </mat-chip-list>              <mat-autocomplete                #auto="matAutocomplete"                (optionSelected)="addFaciliteitAutocomplete($event, point)"              >                <mat-option                  *ngFor="let faciliteit of standaardFaciliteiten"                  [value]="faciliteit"                >                  {{ faciliteit }}                </mat-option>              </mat-autocomplete>            </mat-form-field>          </li>        </ul>        <h2          *ngIf="points.length === 0"          fxLayout="row"          xLayout.xs="column"          fxFlexFill          fxLayoutAlign="center center"        >          Klik op de route om punten toe te voegen.        </h2>      </div>    </div>  </span></div><!-- <button mat-mini-fab class="hoverButton" color="primary" (click)="isEdit = true" *ngIf="!isEdit">    <mat-icon>edit</mat-icon>  </button>  <button mat-mini-fab class="hoverButton" color="primary" *ngIf="isEdit">    <mat-icon>check</mat-icon>  </button> --></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ConfirmRegisterComponent', 'selector': 'app-confirm-register'},{'name': 'DeleteDialogComponent', 'selector': 'app-delete-dialog'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'GeoJsonUploadComponent', 'selector': 'app-geo-json-upload'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'InschrijvenDialogComponent', 'selector': 'app-inschrijven-dialog'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'LoperComponent', 'selector': 'app-loper'},{'name': 'MainNavComponent', 'selector': 'app-main-nav'},{'name': 'MapComponent', 'selector': 'app-map'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'ProfileComponent', 'selector': 'app-profile'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'RegisterRouteComponent', 'selector': 'app-register-route'},{'name': 'RegisterRouteItemComponent', 'selector': 'app-register-route-item'},{'name': 'RouteEditComponent', 'selector': 'app-route-edit'},{'name': 'RoutesOverviewComponent', 'selector': 'app-routes-overview'},{'name': 'SearchDialogComponent', 'selector': 'app-search-dialog'},{'name': 'TrackComponent', 'selector': 'app-track'},{'name': 'TrackConfirmComponent', 'selector': 'app-track-confirm'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'MapComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'MapComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

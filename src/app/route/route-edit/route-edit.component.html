@@ -1,0 +1,11 @@
+<mat-progress-bar mode="indeterminate" *ngIf="!routeToEdit"></mat-progress-bar>
+<app-geo-json-upload *ngIf="routeToEdit" [editMode]="true">
+</app-geo-json-upload>
+
+
+<button mat-mini-fab class="hoverButton" (click)="onDelete()" data-cy="routeDeleteButton">
+    <mat-icon>delete</mat-icon>
+  </button>
+  <mat-card class="error" *ngIf="errorMessage" data-cy="appError">
+    {{ errorMessage | translate}}
+   </mat-card>

@@ -1,0 +1,232 @@
+<nb-layout>
+  <nb-layout-column>
+    <mat-card class="card">
+      <h1 fxLayoutAlign="center center" *ngIf="!editMode">
+        {{"geo-json-upload.Nieuwe route aanmaken" | translate}}
+      </h1>
+      <h1 fxLayoutAlign="center center" *ngIf="editMode">
+        {{"geo-json-upload.Route wijzigen" | translate}}
+      </h1>
+      <span fxLayout="row" fxLayoutGap="2%">
+        <mat-card>
+          <form style="font-size: 12px" [formGroup]="routeForm">
+            <span fxLayout="column" fxLayoutGap="2%">
+              <mat-form-field appearance="fill" color="accent">
+                <mat-label>{{
+                  "geo-json-upload.Naam route Nederlands" | translate
+                }}</mat-label>
+                <input
+                  matInput
+                  formControlName="naam"
+                  data-cy="routeNameField"
+                />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill" color="accent">
+                <mat-label>{{
+                  "geo-json-upload.Naam route Frans" | translate
+                }}</mat-label>
+                <input
+                  matInput
+                  formControlName="naamFrans"
+                  data-cy="routeNameFransField"
+                />
+              </mat-form-field>
+
+              <mat-form-field color="accent" appearance="fill">
+                <mat-label>{{
+                  "geo-json-upload.Lengte" | translate
+                }}</mat-label>
+                <mat-select formControlName="lengte">
+                  <mat-option>Kies</mat-option>
+                  <mat-option [value]="25">25 km</mat-option>
+                  <mat-option [value]="50">50 km</mat-option>
+                  <mat-option [value]="100">100 km</mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <mat-form-field color="accent" appearance="fill">
+                <mat-label>{{
+                  "geo-json-upload.Inschrijven mogelijk" | translate
+                }}</mat-label>
+                <mat-select formControlName="public">
+                  <mat-option>Kies</mat-option>
+                  <mat-option [value]="true">Ja</mat-option>
+                  <mat-option [value]="false">Nee</mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <mat-form-field appearance="fill" color="accent">
+                <mat-label>{{ "geo-json-upload.Start" | translate }}</mat-label>
+                <input
+                  matInput
+                  type="datetime"
+                  placeholder="{{ 'geo-json-upload.start date' | translate }}"
+                  formControlName="start"
+                  [owlDateTime]="startPicker"
+                  [owlDateTimeTrigger]="startPicker"
+                />
+                <owl-date-time #startPicker></owl-date-time>
+              </mat-form-field>
+
+              <mat-form-field appearance="fill" color="accent">
+                <mat-label>{{ "geo-json-upload.Einde" | translate }}</mat-label>
+                <input
+                  matInput
+                  type="datetime"
+                  placeholder="{{ 'geo-json-upload.einde date' | translate }}"
+                  formControlName="einde"
+                  [owlDateTime]="endPicker"
+                  [owlDateTimeTrigger]="endPicker"
+                />
+                <owl-date-time #endPicker></owl-date-time>
+              </mat-form-field>
+
+              <mat-form-field appearance="fill" color="accent">
+                <mat-label>Prijs (€)</mat-label>
+                <input
+                  matInput
+                  type="number"
+                  placeholder="20,5"
+                  formControlName="prijs"
+                />
+              </mat-form-field>
+
+              <mat-form-field color="accent" appearance="fill">
+                <textarea
+                  matInput
+                  rows="3"
+                  placeholder="{{ 'geo-json-upload.Beschrijving Nederlands' | translate }}"
+                  formControlName="beschrijving"
+                  data-cy="routeBeschrijvingField"
+                ></textarea>
+              </mat-form-field>
+
+              <mat-form-field color="accent" appearance="fill">
+                <textarea
+                  matInput
+                  rows="3"
+                  placeholder="{{ 'geo-json-upload.Beschrijving Frans' | translate }}"
+                  formControlName="beschrijvingFrans"
+                  data-cy="routeBeschrijvingFransField"
+                ></textarea>
+              </mat-form-field>
+
+              <label class="btn btn-default" *ngIf="editMode">
+                {{ "geo-json-upload.Afbeeldingen uploaden" | translate }}
+                <input
+                  type="file"
+                  accept="image/*"
+                  multiple
+                  (change)="selectFiles($event)"
+                />
+              </label>
+              <a href="https://maps.openrouteservice.org/" target="_blank">Site voor route aan te maken</a>
+              <label class="btn btn-default">
+                {{ "geo-json-upload.Route uploaden" | translate }}
+                
+              </label>
+                <input
+                  type="file"
+                  id="geoJson"
+                  (change)="onUpload($event.target.files)"
+                  style="margin-left: 1rem"
+                />
+            </span>
+          </form>
+
+          <button
+            mat-raised-button
+            (click)="editMode ? onEditSubmit() : onNewSubmit()"
+            [disabled]="submitButtonDisabled"
+            style="margin-top: 1rem"
+            color="accent"
+            data-cy="routeSubmitButton"
+            *ngIf="!submitBusy && !submitFinished"
+          >
+            {{ editMode ? "Wijzig" : "Maak aan" }}
+          </button>
+          <button
+            mat-raised-button
+            style="margin-top: 1rem"
+            color="accent"
+            *ngIf="!submitBusy && submitFinished"
+            routerLink="/route"
+            data-cy="routeKlaarButton"
+          >
+            {{ "geo-json-upload.Klaar" | translate }}
+          </button>
+          <mat-spinner
+            [diameter]="40"
+            color="primary"
+            *ngIf="submitBusy"
+          ></mat-spinner>
+        </mat-card>
+        <mat-card style="width: 100%">
+          <div
+            *ngIf="!submitFinished && !editMode"
+            fxLayout="row"
+            xLayout.xs="column"
+            fxFlexFill
+            fxLayoutAlign="center center"
+          >
+            {{
+              "geo-json-upload.Maak route aan om punten aan te duiden!"
+                | translate
+            }}
+          </div>
+          <app-map
+            *ngIf="submitFinished || editMode"
+            [routeId]="routeId"
+            [isEdit]="true"
+            (updateStatus)="tussenStopChange($event)"
+          ></app-map>
+        </mat-card>
+      </span>
+    </mat-card>
+    <mat-card>
+      <mat-card-title>Afbeeldingen</mat-card-title>
+      <ul
+        *ngIf="routeToEdit !== null && routeToEdit.afbeeldingen.length > 0"
+        fxLayout="row wrap"
+      >
+        <li
+          class="imageContainer"
+          *ngFor="let afbeelding of routeToEdit.afbeeldingen"
+          fxLayout="column"
+        >
+          <mat-card>
+            <div>
+              <img
+                src="{{ imagesLocation }}/{{ afbeelding }}"
+                class="routeImage"
+              />
+            </div>
+            <button
+              mat-raised-button
+              class="imageDeleteButton"
+              color="primary"
+              (click)="verwijderAfbeelding(afbeelding, $event)"
+            >
+              {{ "geo-json-upload.Verwijder" | translate }}
+            </button>
+          </mat-card>
+        </li>
+      </ul>
+      <mat-card
+        *ngIf="routeToEdit !== null && routeToEdit.afbeeldingen.length === 0"
+        >{{ "geo-json-upload.geen afbeeldingen" | translate }}</mat-card
+      >
+    </mat-card>
+    <mat-card class="error" *ngIf="errorMessage" data-cy="appError">
+      {{ errorMessage | translate }}
+    </mat-card>
+    <!-- <div fxLayoutAlign="center center" style="margin: 5px 0 5px 0;">
+            <button mat-raised-button routerLink="/route/{{routeId}}" color="primary">Voeg punten toe</button>
+            </div> -->
+  </nb-layout-column>
+
+  <nb-layout-footer fixed>
+    <!-- Insert footer here -->
+  </nb-layout-footer>
+</nb-layout>

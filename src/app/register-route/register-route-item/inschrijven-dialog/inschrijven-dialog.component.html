@@ -1,0 +1,152 @@
+<h1 mat-dialog-title>
+  {{ "inschrijven-dialog.Inschrijven voor wandeling" | translate }}
+</h1>
+<div mat-dialog-content>
+  <form>
+    <mat-horizontal-stepper [linear]="true" #stepper>
+      <mat-step label="{{ 'inschrijven-dialog.Algemeen' | translate }}">
+        <p class="desc">
+          {{ "inschrijven-dialog.Algemeen_uitleg1" | translate
+          }}{{ data.route.name.get(translate.currentLang)
+          }}{{ "inschrijven-dialog.Algemeen_uitleg2" | translate }}
+        </p>
+        <ul style="list-style-type: circle">
+          <li>{{ data.route.name.get(translate.currentLang)}}</li>
+          <li>{{ data.route.start | date }}</li>
+          <li>{{ data.route.lengte }} km</li>
+          <li>€ {{data.route.prijs}}</li>
+        </ul>
+        <p class="desc">
+          {{
+            "inschrijven-dialog.Vervolledig de volgende stappen om effectief te kunnen deelnemen."
+              | translate
+          }}
+        </p>
+        <div fxLayoutAlign="center center">
+          <button mat-raised-button matStepperNext color="accent">
+            {{ "inschrijven-dialog.Volgende" | translate }}
+          </button>
+        </div>
+      </mat-step>
+      <mat-step label="{{ 'inschrijven-dialog.Tracking' | translate }}" [completed]="volger > 0">
+        <p class="desc">
+          {{ "inschrijven-dialog.Tracking_uitleg" | translate }}
+        </p>
+        <mat-form-field appearance="fill" color="accent">
+          <mat-label>{{
+            "inschrijven-dialog.Wie kan mij volgen" | translate
+          }}</mat-label>
+          <mat-select [(value)]="volger">
+            <mat-option value="0">{{
+              "inschrijven-dialog.Kies optie" | translate
+            }}</mat-option>
+            <mat-option value="1">{{
+              "inschrijven-dialog.Iedereen (openbaar)" | translate
+            }}</mat-option>
+            <mat-option value="2">{{
+              "inschrijven-dialog.Iedereen (verborgen)" | translate
+            }}</mat-option>
+            <mat-option value="3">{{
+              "inschrijven-dialog.Vrienden" | translate
+            }}</mat-option>
+            <mat-option value="4">{{
+              "inschrijven-dialog.Niemand" | translate
+            }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <p>{{ trackingZin }}</p>
+        <p class="desc">
+          {{
+            "inschrijven-dialog.instelling kan u achteraf nog wijzigen"
+              | translate
+          }}
+        </p>
+        <div fxLayoutAlign="center center">
+          <button
+            mat-raised-button
+            matStepperNext
+            color="accent"
+            [disabled]="volger == 0"
+          >
+            {{ "inschrijven-dialog.Volgende" | translate }}
+          </button>
+        </div>
+      </mat-step>
+      <mat-step
+        label="{{ 'inschrijven-dialog.Tshirt' | translate }}"
+        [completed]="((tshirtVlag && tshirtMaat) || !tshirtVlag) && volger > 0"
+      >
+        <mat-checkbox
+          class="checkbox"
+          [checked]="tshirtVlag"
+          (change)="tshirtVlag = !tshirtVlag"
+        >
+          {{
+            "inschrijven-dialog.Ik wens een T-shirt van Damiaanactie (€ 15)"
+              | translate
+          }}
+        </mat-checkbox>
+        <br />
+        <mat-form-field
+          appearance="fill"
+          color="accent"
+          *ngIf="tshirtVlag"
+          fxLayout="row"
+        >
+          <mat-label>{{ "inschrijven-dialog.Maat" | translate }}</mat-label>
+          <mat-select [(value)]="tshirtMaat">
+            <mat-option value="S">Small</mat-option>
+            <mat-option value="M">Medium</mat-option>
+            <mat-option value="L">Large</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <p>{{ "inschrijven-dialog.TshirtFoto" | translate }}</p>
+        <img
+          src="assets/images/DamiaanTshirtVoorkant.png"
+          alt="T-shirt voorkant"
+          class="tshirt"
+        />
+        <img
+          src="assets/images/DamiaanTshirtAchterkant.png"
+          alt="T-shirt achterkant"
+          class="tshirt"
+        />
+        <div fxLayoutAlign="center center">
+          <button
+            mat-raised-button
+            matStepperNext
+            color="accent"
+            [disabled]="!((tshirtVlag && tshirtMaat) || !tshirtVlag)"
+          >
+            {{ "inschrijven-dialog.Volgende" | translate }}
+          </button>
+        </div>
+      </mat-step>
+      <mat-step label="{{ 'inschrijven-dialog.Overzicht' |translate }}">
+        {{ "inschrijven-dialog.Route overzicht:" | translate }}
+        <ul style="list-style-type: circle">
+          <li>{{ data.route.name.get(translate.currentLang) }}</li>
+          <li>{{ data.route.start | date }}</li>
+          <li>{{ data.route.lengte }} km</li>
+          <li>€ {{data.route.prijs}}</li>
+        </ul>
+        {{ "inschrijven-dialog.Mijn keuzes:" | translate }}
+        <ul style="list-style-type: circle">
+          <li>{{ trackingZinOverzicht }}</li>
+          <li>{{ "inschrijven-dialog.Ik wens een T-shirt van Damiaanactie (€ 15)" | translate }}</li>
+        </ul>
+
+        <div fxLayoutAlign="center center">
+          <button mat-raised-button color="accent" (click)="betaalKlik()">
+            {{ "inschrijven-dialog.Ga naar betaal" | translate }}
+          </button>
+        </div>
+        <div fxLayoutAlign="center center" style="padding-top: 10px;">
+          <a class="desc" (click)="openReglement()">
+            {{ "inschrijven-dialog.akkoord met ons regelement" | translate }}
+          </a>
+        </div>
+      </mat-step>
+    </mat-horizontal-stepper>
+  </form>
+</div>

@@ -1,0 +1,150 @@
+footer {
+    height: 1.5vw;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    color: #fff;
+    font-weight: 1000;
+    line-height: 1.5;
+    bottom: 0;
+    width: 100%;
+}
+
+.info-contact .compte-bancaire, .numero-compte {
+  color: #000;
+  font-family: "Sharp Grotesk Medium 15";
+  text-transform: uppercase;
+  font-size: 1.3vw;
+  margin-bottom: 0;
+  text-decoration: underline;
+  line-height: 1.2;
+  letter-spacing: 0.06693440428380187vw;
+}
+
+.numero-compte {
+  text-decoration: none;
+}
+
+.reseaux {
+  width: 50%;
+  padding-left: 10%;
+}
+
+.contact {
+  width: 50%;
+  text-align: right;
+  padding-right: 10%;
+  font-size: 1.65vw;
+}
+
+li a{
+  display: table-cell;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 1.65vw;
+  padding-bottom: 10px;
+}
+
+.link{
+    padding-left: 1em;
+}
+
+.link:hover{
+    font-size: 1.65vw;
+}
+
+li{
+    display: table;
+}
+
+ul {
+  display: block;
+  list-style-type: none;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+}
+
+.cpville {
+  margin-bottom: 0.53vw;
+}
+
+mat-card-footer {
+  padding: 40px 20px;
+}
+
+mat-card-footer {
+  height: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
+  color: #fff;
+  background-color: #6bb7a9;
+  border-radius: 3px;
+}
+
+.bottom-footer {
+    padding: 0 10%;
+}
+
+.navList {
+  padding: 0;
+}
+
+.navList > a {
+  color: white;
+  background-color: #fe0040;
+  border: 1px #fe0040 solid;
+  font-weight: bold;
+  width: 50%;
+  margin: 0 25% 0 25%;
+  border-radius: 5px;
+  margin-bottom: 1em;
+}
+
+.navList > a:hover {
+  color: #fe0040;
+  background-color: white;
+  border: 1px #fe0040 solid;
+}
+
+a {
+  color: #fff;
+}
+
+mat-card-footer .info-contact > div {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+}
+
+div {
+  display: block;
+}
+
+h2 {
+  font-size: 2.5vw;
+  margin-bottom: 2.5vw;
+}
+
+@media only screen and (max-width: 960px) {
+    mat-card-footer {
+        margin-left: 0.5%;
+        margin-right: 0.5%;
+    }
+}
+
+.icon {
+  height: 2.5vw;
+}
+
+#email{
+    text-decoration: none;
+}
+
+#info{
+  font-size: 1.2vw;
+}

@@ -1,0 +1,38 @@
+html, body {
+  margin: 0;
+  background-color: rgb(253, 242, 242);
+  font-family: Roboto, "Source Sans Pro", sans-serif;
+}
+
+.card {
+  margin: 5px 4px 0px 4px;
+}
+
+.card2 {
+  margin: 0px 4px 0px 4px;
+}
+
+
+.hoverButton {
+  position: fixed !important;
+  bottom: 1rem !important;
+  right: 1rem !important;
+  color: white !important;
+}
+
+.hoverButton:hover {
+color: black !important;
+}
+
+mat-progress-bar {
+  margin-bottom: -4px;
+}
+
+.desc{
+  color: gray;
+  font-size: 0.8rem;
+}
+
+nb-layout-column {
+  padding: 0 !important;
+}

@@ -1,0 +1,40 @@
+<mat-card class="card">
+  <span fxLayout="row" fxLayoutGap="2%" id= "bigscreen">
+    <div style="width: 50%">
+      <app-map [routeId]="route.id"></app-map>
+    </div>
+    <div style="width: 50%; text-align: center">
+      <mat-card-header style="height: 10%; display: block">
+        <mat-card-title style="font-size: xx-large; text-align: center; font-weight: bold; padding-top: 20px; width: 100%">
+          {{ route.name.get(translate.currentLang)}}
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content style="padding-top: 20px; height: 35%">
+        <mat-icon>calendar_today</mat-icon> {{ route.start | date }}
+        <p>{{ route.beschrijving.get(translate.currentLang) }}</p>
+      </mat-card-content>
+      <mat-card-content  id="slideshow" style="padding-top: 20px; height: 35%">
+        <div *ngIf="this.route.afbeeldingen.length > 1">
+          <div style="width:100%;">
+            <ng-image-slider [images]="imageObject" [autoSlide]="1" [showArrow]="false" [infinite]="true" [imagePopup]="false" [animationSpeed]="5" #nav></ng-image-slider>
+          </div>
+        </div>
+        <img mat-card-image *ngIf="this.route.afbeeldingen.length === 1" src="{{imagesLocation}}/{{this.route.afbeeldingen[0]}}"/>
+      </mat-card-content>
+      <mat-card-content  style="height: 10%; text-align: center; padding: 10px 0 0 0;">
+        <div *ngIf="ingeschreven$.value">
+          <p>{{ "Register-route-item.U bent ingeschreven voor deze wandeling" | translate }}</p>
+        </div>
+        <button
+          mat-raised-button
+          data-cy="inUitschrijven-button"
+          color="accent"
+          (click)="openDialog()"
+        >
+          <div *ngIf="!ingeschreven$.value; else uitschrijven">{{ 'Register-route-item.Inschrijven' | translate }}</div>
+          <ng-template #uitschrijven> {{ 'Register-route-item.Uitschrijven' | translate }} </ng-template>
+        </button>
+      </mat-card-content>
+    </div>
+  </span>
+</mat-card>

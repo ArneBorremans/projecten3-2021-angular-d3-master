@@ -1,0 +1,26 @@
+li{
+    width: 25%;
+}
+
+h2{
+    font-size: 1em;
+    font-weight: bold;
+    font-style: italic;
+    margin: 1rem 0 0 0;
+}
+
+.zoekBtn {
+  background-color: #4fb9a9;
+  border-radius: 50%;
+  border-color: #4fb9a9;
+}
+
+/* #addButton {
+  color: white;
+  background-color: #fe0040 !important;
+}
+
+#addButton:hover {
+  color: #fe0040;
+  background-color: white !important;
+} */

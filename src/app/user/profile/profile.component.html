@@ -1,0 +1,69 @@
+<div fxLayoutAlign="center center">
+    <mat-card *ngIf="ui" class="card" fxFlex=100 fxFlex.gt-sm=80>
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>{{ "Profile.Profiel van" | translate }} {{ui.firstName}}</mat-card-title>
+            <mat-card-subtitle>{{ 'Profile.Wandelaar' | translate }}</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content>
+            <p>{{ 'Profile.Voornaam' | translate }}: {{ui.firstName}}<p>
+            <p>{{ 'Profile.Naam' | translate }}: {{ui.lastName}}<p>
+            <p>{{ 'Profile.Gemeente' | translate }}: {{ui.gemeente}}<p></p>
+            <p>{{ 'Profile.E-mailadres' | translate }}: {{ui.email}}</p>
+            <br>
+
+            <h2>{{ 'Profile.Inschrijvingen' | translate }}</h2>
+            <div *ngIf="ui.inschrijvingen.length !== 0" style="width:100%">
+                <table mat-table [dataSource]="ui.inschrijvingen" class="mat-elevation-z8" style="width:100%">
+                    <ng-container matColumnDef="geregistreerdOp" style="width:20">
+                        <th mat-header-cell *matHeaderCellDef >{{ 'Profile.Geregistreerd op' | translate }} </th>
+                        <td mat-cell *matCellDef="let inschrijving"> {{inschrijving.geregistreerdOp | date}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="routeNaam" style="width:20">
+                        <th mat-header-cell *matHeaderCellDef> {{ 'Profile.Wandeling' | translate }} </th>
+                        <td mat-cell *matCellDef="let inschrijving"> {{inschrijving.routeNaam.get(translate.currentLang)}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="zichtbaarheid" style="width:20">
+                        <th mat-header-cell *matHeaderCellDef> {{ 'Profile.Zichtbaarheid' | translate }} </th>
+                        <td mat-cell *matCellDef="let inschrijving"> 
+                            <form style="width: 100%;">
+                                <mat-form-field color="accent" appearance="fill" style="width: 100%;">
+                                    <mat-select style="width: 100%;" #ref [value]="inschrijving.zichtbaarheid" (selectionChange)="updateZichtbaarheid(inschrijving, ref.value)">
+                                        <mat-option style="width: 100%;" [value]="1">{{ 'Profile.Iedereen' | translate }}</mat-option>
+                                        <mat-option style="width: 500px;" [value]="2">{{ 'Profile.Met uw voornaam, naam en gemeente' | translate }}</mat-option>
+                                        <mat-option style="width: 100%;" [value]="3">{{ 'Profile.Met een deelbare link (via mail)' | translate }}</mat-option>
+                                        <mat-option style="width: 100%;" [value]="4">{{ 'Profile.Verborgen' | translate }}</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </form>
+                        </td>
+                    </ng-container>
+                    <ng-container matColumnDef="startDatumEnUur" style="width:20">
+                        <th mat-header-cell *matHeaderCellDef> {{ 'Profile.Startdatum en uur' | translate }} </th>
+                        <td mat-cell *matCellDef="let inschrijving"> 
+                            <!--{{inschrijving.startDatumEnUur-->
+                            {{datum | date}}
+                        </td>
+                    </ng-container>
+                    <ng-container matColumnDef="eindDatumEnUur" style="width:20">
+                        <th mat-header-cell *matHeaderCellDef> {{ 'Profile.Einddatum en uur' | translate }} </th>
+                        <td mat-cell *matCellDef="let inschrijving"> 
+                            <!--{{inschrijving.eindDatumEnUur}}-->
+                            {{datum | date}}
+                        </td>
+                    </ng-container>
+
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns" style="width:100%"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns" style="width:100%"></tr>
+                </table> 
+            </div>
+            <div *ngIf="ui.inschrijvingen.length === 0">
+                {{ 'Profile.U bent nog niet ingescheven voor een wandeling.' | translate }}
+            </div>
+        </mat-card-content>
+    </mat-card>
+    <mat-card class="error" *ngIf="errorMsg" data-cy="appError">
+        {{ errorMsg | translate}}
+    </mat-card>
+</div>

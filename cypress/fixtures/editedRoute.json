@@ -1,0 +1,11 @@
+{
+  "id": 1,
+  "naam": "test123test",
+  "lengte": 25,
+  "geoJson": "",
+  "punten": null,
+  "start": "0001-01-01T00:00:00",
+  "beschrijving": null,
+  "openbaar": true,
+  "lopers": null
+}

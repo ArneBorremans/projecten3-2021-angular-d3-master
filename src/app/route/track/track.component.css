@@ -1,0 +1,53 @@
+mat-form-field::ng-deep.mat-form-field-underline {
+  background-color: black !important;
+}
+
+mat-form-field::ng-deep.mat-focused, mat-form-field::ng-deep.mat-form-field-label {
+  color: black !important;
+}
+
+mat-form-field::ng-deep.mat-form-field-ripple {
+  background-color: #fe0040 !important;
+}
+
+.map-container{
+    width: 100%;
+}
+
+nb-layout-column {
+  padding: 0rem !important;
+  height: 100% !important;
+  background-color: white !important;
+
+}
+
+.columns, .content, .layout-container, .layout, .scrollable-container {
+  height: 500px !important; 
+}
+
+.nb-theme-default nb-layout .scrollable-container {
+  height: 0px !important;
+}
+.nb-theme-default nb-layout .layout {
+  background-color: #edf1f7;
+  color: #222b45;
+  font-family: Open Sans, sans-serif;
+  font-size: .9375rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  min-height: 100vh;
+  height: 0px !important;
+}
+
+.columns {
+  background-color: white !important;
+}
+
+[_nghost-qnh-c11] .layout-container[_ngcontent-qnh-c11] .content[_ngcontent-qnh-c11] .columns[_ngcontent-qnh-c11] {
+  display: flex;
+  flex: 1;
+  -ms-flex: 1 1 auto;
+  flex-direction: row;
+  width: 100%;
+  background-color: white !important;
+}

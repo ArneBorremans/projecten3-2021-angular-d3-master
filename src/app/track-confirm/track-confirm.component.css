@@ -1,0 +1,19 @@
+
+button {
+  font-size: 0.5rem;
+}
+
+.centerText {
+  text-align: start;  
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0px 0px 0px 15px;
+  font-size: 1rem;
+}
+
+.zoekBtn {
+  background-color: #4fb9a9;
+  border-radius: 50%;
+  border-color: #4fb9a9;
+}

@@ -1,0 +1,38 @@
+mat-form-field::ng-deep.mat-form-field-underline {
+  background-color: black !important;
+}
+
+mat-form-field::ng-deep.mat-focused, mat-form-field::ng-deep.mat-form-field-label {
+  color: black !important;
+}
+
+mat-form-field::ng-deep.mat-form-field-ripple {
+  background-color: #fe0040 !important;
+}
+a{
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+}
+
+  a:hover {
+    color: #fe0040;
+    text-decoration: underline;
+  }
+
+button {
+  width: 40%;
+  height: 40px;
+  display: inline-block;
+  color: white;
+  background-color: #fe0040 !important;
+  margin: 1.5% 5% 0 5%;
+  overflow: hidden;
+}
+
+
+  button:hover {
+    color: #fe0040;
+    background-color: white !important;
+  }

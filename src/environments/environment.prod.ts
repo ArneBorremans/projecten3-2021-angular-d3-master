@@ -1,0 +1,8 @@
+export const environment = {
+  production: true,
+  apiUrl: 'https://damiaan.azurewebsites.net/api',
+  map: {
+    tileset: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }
+};

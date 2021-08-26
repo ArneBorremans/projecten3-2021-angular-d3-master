@@ -1,0 +1,174 @@
+.backgroundImage {
+  background-image: url("/assets/images/Wandeling.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 4em 8em;
+}
+
+.navBar, .mobileNavBar {
+  position: relative;
+  padding:  0;
+  border-radius: 50px;
+  background-color: white;
+  display: flex;
+  width: auto;
+  overflow: hidden;
+}
+
+.navList {
+  padding: 0 1em 0 0;
+  width: 100%;
+  display: flex;
+  align-content: flex-end;
+  height: max-content;
+}
+
+.navList > a,
+span > a, p {
+  color: black;
+  font-weight: bold;
+  width: fit-content;
+}
+
+.navList > a:hover,
+span > a:hover {
+  color: #fe0040;
+  background-color: white;
+  animation: none;
+}
+
+#logo:hover {
+  cursor: default;
+  background-color: white;
+}
+
+#logo {
+  background-color: white;
+  padding-left: 50px;
+  height: inherit;
+}
+
+#logoImage {
+  padding: 0.1em;
+  height: inherit;
+}
+
+.is-active {
+  color: #fe0040 !important;
+  background-color: white !important;
+}
+
+.langSelect {
+  border: none;
+  background: none;
+  color: black;
+  font-weight: bold;
+}
+
+.inDeKijker {
+  display: flex;
+  align-items: center;
+  background-color: #fe0040;
+  height: 100%;
+  padding: 0 2em;
+}
+
+.inDeKijker > a {  
+  color: white;
+  font-size: 16px;
+  background-color: #fe0040;
+  text-decoration-line: none;
+}
+
+.inDeKijker > a:hover {  
+  color:black;  
+  font-weight: bold;
+  background-color: inherit;
+}
+
+.is-active-inDeKijker {
+  color:black !important;
+  background-color: #fe0040 !important;
+
+}
+
+button {
+  margin-right: 0.4em;
+}
+
+mat-icon {
+  color: black;
+}
+
+#mobileButton {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  transform: rotate(90deg);
+  filter: invert(15%) sepia(82%) saturate(6872%) hue-rotate(340deg) brightness(103%) contrast(110%);
+}
+
+.mobileNavBar{
+    display: none;
+}
+
+.mobileDivider{
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+@media only screen and (max-width: 1050px) {
+  .navList{
+    justify-content: center;
+  }
+  
+  #logo {
+    padding-left: 5px;
+    height: 65px;
+    width: 50px;
+  }
+
+  #mobileButton{
+    margin-left: 5px;
+  }
+
+  .mobileNavBar {
+    display: block;
+    margin: 0;
+  }
+
+  .langSelect{
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 60%;
+    height: 30px;
+  }
+
+  .langSelect2{
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 60%;
+    height: 30px;
+  }
+
+  .navBar {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .backgroundImage {
+    padding: 4em 0em;
+  }
+  .mobileNavBar {
+    width: inherit;
+    height: inherit;
+  }
+
+  #button1{
+    margin: 0em 0em 0em 1em;
+  }
+}

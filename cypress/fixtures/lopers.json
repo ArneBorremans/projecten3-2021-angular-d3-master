@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "firstName": "fred",
+    "lastName": "perry",
+    "gemeente": "gent",
+    "email": "fred@perry.be",
+    "geregistreerdeRoutes": []
+  },
+  {
+    "id": 2,
+    "firstName": "thomas",
+    "lastName": "cook",
+    "gemeente": "brugge",
+    "email": "thomas@cook.be",
+    "geregistreerdeRoutes": []
+  },
+  {
+    "id": 3,
+    "firstName": "jean",
+    "lastName": "jaques",
+    "gemeente": "gent",
+    "email": "jean@jaques.be",
+    "geregistreerdeRoutes": []
+  },
+  {
+    "id": 4,
+    "firstName": "jean",
+    "lastName": "renault",
+    "gemeente": "gent",
+    "email": "jean@renault.be",
+    "geregistreerdeRoutes": []
+  },
+  {
+    "id": 5,
+    "firstName": "james",
+    "lastName": "cook",
+    "gemeente": "antwerpen",
+    "email": "james@cook.com",
+    "geregistreerdeRoutes": []
+  }
+]

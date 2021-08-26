@@ -1,0 +1,39 @@
+<div fxLayoutAlign="center center">
+    <form [formGroup]="track" (ngSubmit)="onSubmit()">
+        <span fxLayout="column" id="form">
+            <span fxLayout="row" fxLayoutGap="2%" id="name">
+                <mat-form-field>
+                    <input matInput placeholder="{{ 'search-dialog.Achternaam' | translate }}" aria-label="nameParticipant" data-cy="nameParticipant"
+                        formControlName="nameParticipant" />
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="{{ 'search-dialog.Voornaam' | translate }}" aria-label="surnameParticipant" data-cy="surnameParticipant"
+                        formControlName="surnameParticipant" />
+                </mat-form-field>
+            </span>
+            <mat-form-field>
+                <input matInput placeholder="{{ 'search-dialog.Gemeente' | translate }}" aria-label="locationParticipant" data-cy="locationParticipant"
+                    formControlName="locationParticipant" />
+            </mat-form-field>
+
+            <button mat-raised-button type="submit" color="primary" data-cy="login-button" *ngIf="!loading">
+                {{ 'search-dialog.Zoek' | translate }}
+            </button>
+            <mat-spinner [diameter]="40" color="primary" *ngIf="loading"></mat-spinner>
+            <p class="desc">{{ 'search-dialog.Om een verborgen wandelaar te vinden, dient u alle 3 de velden correct in te vullen.' | translate }}</p>
+        </span>
+    </form>
+
+    <div>
+        <div *ngIf="filteredLopers && filteredLopers.length > 0">
+            <ul class="lopers">
+                <li *ngFor="let loper of filteredLopers" [class.selected]="loper === selectedLoper"
+                    (click)="onSelect(loper)">
+                    <span class="badge" data-cy="filteredLoper">
+                        <mat-icon>explore</mat-icon>
+                    </span> {{loper.firstName}} {{loper.lastName}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

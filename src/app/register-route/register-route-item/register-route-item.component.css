@@ -1,0 +1,11 @@
+img {
+    height: 100%;
+    width: auto;
+    max-height: 500px !important;
+  }
+
+  @media only screen and (max-width: 1050px) {
+    #slideshow {
+      display: none;
+    }
+}

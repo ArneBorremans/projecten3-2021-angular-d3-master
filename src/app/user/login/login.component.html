@@ -1,0 +1,31 @@
+<div fxLayoutAlign="center center">
+  <mat-card class="card" fxFlex.xs=100 fxFlex=40>
+    <form [formGroup]="user" (ngSubmit)="onSubmit()">
+      <mat-card-header>
+        <mat-card-title>{{ 'Login.Log in' | translate }}</mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content fxLayout="column">
+        <mat-form-field>
+          <input matInput placeholder="{{ 'Login.email' | translate }}" aria-label="email" data-cy="login-email" formControlName="username" />
+        </mat-form-field>
+
+        <mat-form-field>
+          <input type="password" matInput placeholder="{{ 'Login.wachtwoord' | translate }}" aria-label="password" data-cy="login-password"
+            formControlName="password" />
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-actions fxLayout="row" fxLayoutAlign="space-between center">
+        <a href="/register">{{ 'Login.Registreer hier' | translate }}</a>
+
+        <button mat-raised-button *ngIf="!loading" type="submit" color="primary" data-cy="login-button">
+          {{ 'Login.Log in' | translate }}
+        </button>
+        <mat-spinner [diameter]="40" color="primary" *ngIf="loading"></mat-spinner>
+      </mat-card-actions>
+    </form>
+    <mat-card class="error" *ngIf="errorMessage" data-cy="appError">
+     {{ errorMessage | translate}}
+    </mat-card>
+  </mat-card>
+</div>

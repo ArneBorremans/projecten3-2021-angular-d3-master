@@ -1,0 +1,188 @@
+{
+    "Footer":{
+        "Volg ons": "Suivez-nous",
+        "Contacteer ons": "Contactez-nous",
+        "Ondernemingsnummer": "Numéro d'entreprise"
+    },
+    "Home" : {
+        "Wandeling damiaanactie": "Promenade Action Damien",
+        "inleiding": "Damien Expérience consiste en des marches organisées par Damiaanactie dans le but de collecter des fonds. Vous voulez faire partie d'une expérience inoubliable? Et soutenez également notre association caritative?",
+        "Inschrijven": "Inscrivez-vous",
+        "Schrijf je in": "Inscrivez-vous",
+        "Uitleg": "Vous pouvez vous inscrire pour une marche de 25, 50 ou 100 km.",
+        "Gebruik de app": "Utiliser l'application",
+        "Via de app kan je uw locatie delen en uw route bekijken.": "Grâce à l'application, vous pouvez partager votre position et visualiser votre itinéraire.",
+        "Download onze app": "Télécharger l'application",
+        "Word gevolgd": "Mot suivi",
+        "Uw supporters kunnen u van thuis uit volgen en supporten!": "Vos supporters peuvent vous suivre et vous soutenir depuis chez vous !",
+        "Volg een wandelaar": "Suivre un marcheur",
+        "Volg ons": "Suivez-nous",
+        "Contacteer ons": "Contactez-nous",
+        "Damiaan Experience": "Damien Expérience"
+    },
+    "Main-nav" : {
+        "Inschrijven voor wandeling": "s'Inscrire pour une promenade",
+        "Mijn profiel": "Mon profil",
+        "Afmelden": "Désinscription" ,
+        "Damiaan Experience": "Damien Expérience",
+        "Zoek iemand op": "Chercher quelqu'un"
+    },
+    "Register-route-item":{
+        "Inschrijven": "s'Inscrire",
+        "Uitschrijven": "Se désabonner",
+        "U moet zich eerst aanmelden": "Vous devez d'abord vous inscrire",
+        "U bent ingeschreven voor ": "Vous êtes inscrit à ",
+        "Er is iets mis gegaan met uw registratie.": "Quelque chose s'est mal passé lors de votre inscription.",
+        "U bent uitgeschreven voor ": "Vous êtes désinscrit ",
+        "U bent ingeschreven voor deze wandeling": "Vous êtes inscrit à cette marche"
+    },
+    "Track":{
+        "Voornaam": "Prénom",
+        "Achternaam": "Nom de famille",
+        "Gemeente": "Commune",
+        "uit": "de",
+        "Deze wandelaar werd niet gevonden of de wandeling is nog niet begonnen.": "Ce randonneur n'a pas été trouvé ou la promenade n'a pas encore commencé."
+    },
+    "Track-confirm":{
+        "Uitleg": "Sur cette page, vous pouvez suivre les personnes qui sont actuellement en train de marcher. Chaque participant a puchoisir qui peut le rechercher. Donc, si vous ne trouvez pas la personne que vous cherchez, il se peut qu'elle soit a choisi de ne pas partager son emplacement.",
+        "Wandelaars": "Randonneurs",
+        "Niemand": "En ce moment, personne ne marche qui veut partager publiquement son emplacement.",
+        "Zoek iemand op": "Chercher quelqu'un"
+    },
+    "Routes-overview":{
+        "Wandelingen": "Promenades",
+        "Nog geen wandelingen toegevoegd": "Pas encore de nouvelles randonnées"
+    },
+    "Profile":{
+        "Wandelaar": "Randonneur",
+        "Voornaam": "Prénom",
+        "Naam": "Nom",
+        "Gemeente": "Municipalité",
+        "E-mailadres": "E-mail",
+        "Inschrijvingen": "Abonnements",
+        "U bent nog niet ingescheven voor een wandeling.": "Vous n'êtes pas encore inscrit pour une promenade.",
+        "not found": "Utilisateur non trouvé",
+        "Geregistreerd op": "Enregistré le",
+        "Wandeling": "Promenade",
+        "Zichtbaarheid": "Visibilité",
+        "Startdatum en uur": "Date et heure de début",
+        "Einddatum en uur": "Date et heure de fin",
+        "Iedereen": "Tout le monde",
+        "Met uw voornaam, naam en gemeente": "Avec votre prénom, votre nom et votre commune",
+        "Met een deelbare link (via mail)": "Avec un lien divisible (par courrier)",
+        "Verborgen": "Caché",
+        "Profiel van": "Profil de"
+        
+    },
+    "Route_beheren" : {
+        "Bevestig delete title": "Vous êtes sûr de vouloir supprimer cet itinéraire?"
+    },
+    "Error": {
+        "server error": "Quelque chose a mal tourné, réessayez plus tard",
+        "unexpected error": "Quelque chose d'inattendu a mal tourné"
+    },
+    "Register": {
+        "required": "obligatoire",
+        "minlength": "doit comporter au moins {{minLength}} caractères",
+        "hasNumber": "doit contenir au moins 1 chiffre",
+        "hasUpperCase": "doit contenir au moins une lettre majuscule",
+        "hasLowerCase": "doit contenir au moins une lettre minuscule",
+        "userAlreadyExists": "Il y a déjà un utilisateur avec cette adresse électronique",
+        "emailError": "l'émail n'est pas valable",
+        "passwordsDiffer": "les mots de passe ne sont pas les mêmes",
+        "veld verkeerd": "Tous les champs ne sont pas remplis correctement",
+        "Registreer": "S'inscrire",
+        "Al een account? Log hier in": "Vous avez déjà un compte ? Connectez-vous ici",
+        "voornaam": "Prénom",
+        "achternaam": "Nom",
+        "email": "E-mail",
+        "gemeente": "Municipalité",
+        "wachtwoord": "mot de passe",
+        "bevestig wachtwoord": "confirmer le mot de passe"
+    },
+    "search-dialog": {
+        "niet gevonden": "Personne non trouvée!",
+        "Achternaam": "Nom",
+        "Voornaam": "Prénom",
+        "Gemeente": "Municipalité",
+        "Zoek": "Recherchez",
+        "Om een verborgen wandelaar te vinden, dient u alle 3 de velden correct in te vullen.": "Afin de trouver un randonneur caché, vous devez remplir correctement les 3 champs."
+    },
+    "map": {
+        "niet gevonden": "Route non trouvée",
+        "Klik op de route om punten toe te voegen.": "Cliquez sur l'itinéraire pour ajouter des points."
+    },
+    "track": {
+        "niet gevonden": "Aucun itinéraire trouvé pour ce coureur"
+    },
+    "Login":{
+        "Registreer hier": "Inscrivez-vous ici",
+        "Log in": "Se connecter",
+        "failed login": "Le nom d'utilisateur ou le mot de passe sont erronés",
+        "email": "e-mail",
+        "wachtwoord": "mot de passe"
+    },
+    "inschrijven-dialog":{
+        "Algemeen_uitleg1": "Vous êtes sur le point de vous inscrire à la",
+        "Algemeen_uitleg2": "promenade. Les caractéristiques les plus importantes de la randonnée sont énumérées ci-dessous.",
+        "Inschrijven voor wandeling": "S'inscrire pour une promenade",
+        "Prijs voor wandeling: 20 euro": "Prix de la promenade : 20 euros",
+        "Vervolledig de volgende stappen om effectief te kunnen deelnemen.": "Suivez les étapes suivantes pour participer efficacement.",
+        "Volgende": "Suivant",
+        "Tracking_uitleg": "Pendant la promenade, vous aurez une application qui vous indiquera le bon chemin. Cette application a également une fonction qui permet à d'autres personnes de suivre votre position tout en marchant. Ci-dessous, vous pouvez choisir qui a la possibilité de vous suivre (vous décidez qui peut vous suivre et quand).",
+        "Wie kan mij volgen": "Qui peut me suivre",
+        "Iedereen (openbaar)": "Tout le monde (public)",
+        "Iedereen (verborgen)": "Tout le monde. (caché)",
+        "Vrienden": "Amis",
+        "Niemand": "Personne",
+        "instelling kan u achteraf nog wijzigen": "Vous pouvez modifier ce paramètre par la suite dans 'mon profil'.",
+        "Ik wens een T-shirt van Damiaanactie (€ 15)": "Je voudrais un T-shirt de Action Damien (€ 15)",
+        "Maat": "Taille",
+        "Route overzicht:": "Aperçu de la route :",
+        "Mijn keuzes:": "Mes choix :",
+        "Ga naar betaal": "Aller au paiement",
+        "akkoord met ons regelement": "En cliquant sur 'Aller au paiement', vous acceptez notre règlement.",
+        "Kies optie": "Choisissez l'option",
+        "TshirtFoto": "Voici un exemple de l'avant et de l'arrière du T-shirt.",
+        "Algemeen": "Général",
+        "Tracking": "Suivi",
+        "Tshirt": "T-shirt",
+        "Overzicht": "Vue d'ensemble",
+        "Iedereen kan mij volgen.": "Tout le monde peut me suivre.",
+        "Iedereen die mijn naam, voornaam en adres kent, kan mij volgen.": "Toute personne qui connaît mon nom, mon prénom et mon adresse peut me suivre.",
+        "Alleen de mensen die ik kies kunnen mij volgen (deelbare link wordt na betaling doorgestuurd).": "Seules les personnes que je choisis peuvent me suivre (le lien divisible sera transmis après paiement).",
+        "Niemand kan mij volgen.": "Personne ne peut me suivre.",
+        "Ik wens een T-shirt van Damiaanactie maat": "Je veux un T-shirt de la taille de Action Damien ",
+        "Ik wens geen T-shirt.": "Je ne veux pas de T-shirt.",
+        "Hierdoor zal u op deze website door iedereen kunnen gevolgd worden.": "De ce fait, vous serez suivi par tout le monde sur ce site.",
+        "Hierdoor zal u op deze website door iedereen die uw voornaam, naam en gemeente kent, kunnen gevolgd worden.": "Ainsi, vous serez suivi sur ce site par tous ceux qui connaissent votre prénom, votre nom et votre commune.",
+        "Hierdoor zal u een deelbare link ontvangen waarmee u kan gevolgd worden.": "Vous disposerez ainsi d'un lien partageable que vous pourrez suivre.",
+        "Hierdoor zal niemand u kunnen volgen.": "De ce fait, personne ne pourra vous suivre."
+    },
+    "geo-json-upload":{
+        "Naam route Nederlands": "Nom de la route à néerlandais",
+        "Naam route Frans": "Nom de la route à français",
+        "Lengte": "Longueur",
+        "Inschrijven mogelijk": "Enregistrement possible",
+        "Start": "Démarrer",
+        "Einde": "Fin",
+        "Maak route aan om punten aan te duiden!": "Créez des itinéraires pour marquer des points !",
+        "start date": "date de début",
+        "Beschrijving Nederlands": "Description à néerlandais",
+        "Beschrijving Frans": "Description à français",
+        "Chat met wandelaar": "Chat avec le marcheur",
+        "Ongeldig formaat": "Format non valide",
+        "Dit bestand kan niet geupload worden:": "Ce fichier ne peut pas être téléchargé :",
+        "Startdatum moet voor de eindedatum liggen!": "La date de début doit être antérieure à la date de fin !",
+        "Nieuwe route aanmaken": "Créer un nouvel itinéraire",
+        "Route wijzigen": "Changer d'itinéraire",
+        "Afbeeldingen uploaden": "Télécharger des images",
+        "Route uploaden": "Télécharger l'itinéraire"
+    },
+    "Betaling-bevestigd": {
+        "Hartelijk dank!": "Merci beaucoup",
+        "Oeps...": "Oops...",
+        "De betaling werd succesvol afgerond! U bent nu ingeschreven!" : "Le paiement a été effectué avec succès ! Vous êtes maintenant inscrit !",
+        "Er liep iets mis bij de betaling": "Il y a eu un problème avec le paiement."
+    }
+}

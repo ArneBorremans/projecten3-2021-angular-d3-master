@@ -1,0 +1,12 @@
+h1{
+    color: black;
+}
+
+app-footer {
+    width: 100%;
+    height: 500px;
+}
+
+app-main-nav {
+    height: 100%;
+}

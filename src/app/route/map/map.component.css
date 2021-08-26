@@ -1,0 +1,21 @@
+.map-frame{
+    border: 2px solid black;
+    height: 600px;
+}
+
+.map{
+    height: 100%;
+}
+
+.pointNaamContainer {
+    display: flex;
+    align-items: center;
+}
+
+.pointNaamContainer > mat-icon {
+    margin-right: 0.5em;
+}
+
+.PointLijst {
+    padding: 0 !important;
+}

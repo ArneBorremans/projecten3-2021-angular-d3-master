@@ -1,0 +1,9 @@
+<p mat-dialog-title>Zeker dat u deze route wil verwijderen?</p>
+<div mat-dialog-content></div>
+<div mat-dialog-actions fxLayoutAlign="end">
+    <button mat-button (click)="onCancel()" *ngIf="!busyVlag"
+            data-cy="routeDeleteCancelButton">Annuleer</button>
+    <button mat-button (click)="onDelete()" *ngIf="!busyVlag" cdkFocusInitial
+            data-cy="routeDeleteConfirmButton">Ja</button>
+    <mat-spinner [diameter]="40" color="primary" *ngIf="busyVlag"></mat-spinner>
+</div>

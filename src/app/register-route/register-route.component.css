@@ -1,0 +1,23 @@
+li{
+    width: 25%;
+}
+
+h2{
+    font-size: 1em;
+    font-weight: bold;
+    font-style: italic;
+}
+
+button {
+  height: 40px;
+  display: inline-block;
+  color: white;
+  background-color: #fe0040 !important;
+  margin: 1.5% 5% 0 5%;
+  overflow: hidden;
+}
+
+button:hover {
+  color: #fe0040;
+  background-color: white !important;
+}

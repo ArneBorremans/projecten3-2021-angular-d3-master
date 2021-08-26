@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\cypress",
+    "\\cypress\\integration",
+    "\\cypress\\integration\\logout",
+    "\\cypress\\plugins",
+    "\\cypress\\support",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\main-nav"
+  ],
+  "PreviewInSolutionExplorer": false
+}
